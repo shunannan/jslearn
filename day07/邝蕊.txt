@@ -1,0 +1,111 @@
+﻿1.99乘法表写一遍
+    var n = 1
+    var j = 1;
+    for (var n = 1; n < 10; n++) {
+        for (var j = 1; j <= n; j++) {
+            document.write(j + "*" + n + "=" + (n * j)+"&nbsp;&nbsp;")
+        }
+        document.write("<br>");
+    }
+
+
+2.骰子游戏  >=10 大  小于10 就是小
+1.输入用户名  用户名不能为空
+2.问玩家玩几次游戏  次数得是大于0的整数
+3.开始游戏 提示第几次游戏
+4.请猜大小 
+5.押注金额 必须大于0金额
+6.判断是否猜中 
+7.当游戏结束 统计是赢了还是输了多少钱
+8.全程不能取消游戏  自然结束
+
+var flag = true;
+    while (flag) {
+        var pro = prompt("请输入用户名");
+        if (+pro !== 0) {
+            flag = false;
+        }
+        console.log(flag)
+    }
+
+    flag = true;
+    while (flag) {
+        var num = prompt("请问需要玩几次游戏(大于0次)");
+        var sum = 0
+        if (num != null && +num != 0 && num > 0) {
+
+            for (var i = 0; i < num; i++) {
+                flag = true;
+                alert("游戏开始，现在是第" + (i + 1) + "次游戏");
+                while (flag) {
+                    var size = prompt("请猜骰子大小，大于10为大，小于10为小（大或小）");
+                    if (size == "大" || size == "小") {
+
+                        while (flag) {
+                            var money = +prompt("请输入押注金额(金额必须大于0)");
+
+                            if (money > 0) {
+                                var rdom1 = parseInt(Math.random() * 6) + 1;
+                                var rdom2 = parseInt(Math.random() * 6) + 1;
+                                var rdom3 = parseInt(Math.random() * 6) + 1;
+                                console.log(rdom1, rdom2, rdom3)
+                                var redultRdom = rdom1 + rdom2 + rdom3;
+                                console.log(redultRdom)
+                                if (redultRdom < 10 && size == "小" || redultRdom > 10 && size == "大") {
+                                    alert("恭喜你，第" + (i + 1) + "局游戏胜利");
+                                    sum += money;
+
+                                } else {
+                                    alert("很遗憾，第" + (i + 1) + "局游戏失败");
+                                    sum -= money;
+                                }
+
+                                flag = false;
+                            }
+                        }
+                    }
+                }
+            }
+            if (sum > 0) {
+                alert("恭喜，你赢得了" + sum)
+            } else {
+                alert("很遗憾，你输了" + (-sum))
+            }
+
+        }
+
+    }
+
+
+3.猜点数 
+
+var rdom = parseInt(Math.random() * 100 + 1);
+    flag = true;
+    while (flag) {
+        var num = +prompt("猜大小，请输入1-100之间的数字");
+        if (num > 1 && num < 100) {
+            for(i = 0; num!=rdom; i++) {
+                if(num<rdom) {
+                    alert("你猜小了，请重新猜");
+                    num = +prompt("猜大小，请输入1-100之间的数字");
+                }else {
+                    alert("你猜大了，请重新猜");
+                    num = +prompt("猜大小，请输入1-100之间的数字");
+                }
+            }
+            alert("恭喜你，猜中了，点数为："+num)
+            flag = false
+        }
+    }
+
+
+2 3 5 组成20块钱的方案有几种
+for (x = 0; x <= 10; x++) {
+        for (y = 0; y <= 6; y++) {
+            for (z = 0; z <= 4; z++) {
+                if (x * 2 + y * 3 + z * 5 == 20) {
+                    console.log(x + "*2+" + y + "*3+" + z + "*5=20")
+                }
+            }
+        }
+    }

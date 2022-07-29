@@ -1,0 +1,45 @@
+var n1=10;
+var n2=20;
+
+var n = n1++;  
+
+console.log('n='+n); 
+console.log('n1='+n1);
+
+n = ++n1 ; 
+console.log('n='+n); 
+console.log('n1='+n1); 
+
+n = n2--;   
+console.log('n='+n); 
+console.log('n2='+n2);
+
+n = --n2; 
+console.log('n='+n); 
+console.log('n2='+n2); 
+
+
+var b = Boolean("哈哈哈") + Boolean("") && undefined * 0 + 6 || null < 13
+console.log(b); 
+console.log(typeof b);
+
+
+var a = 10;
+Boolean(a) + true * null.toString() && !!!null 
+console.log(a)
+console.log(typeof a)
+
+
+写代码题
+
+1.让用户输入一个数字判断是否是水仙花数  100-999之间的数字   398 === 3*3*3+9*9*9+8*8*8
+
+2.让用户输入一个数字,判断该数字是否是7 的倍数
+
+3.让用户输入连续输入3个数字 得到这3个数字的和  并且获取到这三个数字中的最大值
+
+4.让用户账号和密码判断账号和密码是否等于 '张三' 和 '123456' 是就弹窗登录成功  不是就弹窗登录失败
+
+1.如果用户点了取消 或者说没输入内容 或者说不是数字 弹窗 提示请输入合法的数字
+2.如果说用户输入的是合法的数 判断是否是一个整数 如果不是整数 提示请输入整数
+3.如果说用户输入的是整数 弹窗是奇数还是偶数

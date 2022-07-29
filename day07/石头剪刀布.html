@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var name1 = prompt("请输入第一个用户名");
+    var quanfa1 = prompt("请输入石头或剪刀或布");
+    if (quanfa1 == "石头" || quanfa1 == "剪刀" || quanfa1 == "布") {
+        var name2 = prompt("请输入第一个用户名");
+        var quanfa2 = prompt("请输入石头或剪刀或布");
+        if (quanfa2 == "石头" || quanfa2 == "剪刀" || quanfa2 == "布") {
+            if (quanfa1 == quanfa2) {
+                alert(name1 + "出了" + quanfa1 + "\n" + name2 + "出了" + quanfa2 + "\n" + "此局为平局");
+            } else if (quanfa1 == "石头" && quanfa2 == "剪刀" || quanfa1 == "剪刀" && quanfa2 == "布" || quanfa1 == "布" && quanfa2 == "石头") {
+                alert(name1 + "出了" + quanfa1 + "\n" + name2 + "出了" + quanfa2 + "\n" + "此局为" + name1 + "赢");
+            }else{
+                alert(name1 + "出了" + quanfa1 + "\n" + name2 + "出了" + quanfa2 + "\n" + "此局为" + name2 + "赢");
+            }
+        }else {
+            alert("您输入的拳法有误");
+        }
+
+    } else {
+        alert("您输入的拳法有误");
+    }
+</script>
+</html>

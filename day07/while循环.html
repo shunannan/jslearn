@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var num = 100;
+    while (num <= 999) {
+        var ge = num % 10;
+        var shi = parseInt(num % 100 / 10);
+        var bai = parseInt(num/ 100);
+        var sum = Math.pow(ge, 3) + Math.pow(shi, 3) + Math.pow(bai, 3);
+        if (num == sum) {
+            console.log(num);
+        }
+        num++
+    }
+</script>
+
+</html>

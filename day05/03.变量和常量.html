@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    // 注释  单行注释
+    /* ctrl + shift + /  多行注释 */
+
+    /* 
+      变量：
+        -可以变化的值 10 11
+      常量：
+        -固定不变的值 名字
+    */
+
+    // 1.使用var关键字声明变量存储值  var 变量名
+    // var age;
+    // 2.给变量赋值
+    // age = 10;
+    // 3.使用变量的
+    // alert(age + 10);
+    // 创建并且赋值变量
+    // age = 10;
+    // alert(age);
+
+    // 创建多个变量
+    // var age;
+    // var gender;
+    // var address;
+    // age = 10;
+    // gender= "男";
+    // address = "深圳";
+    // alert(age)
+    // alert(gender)
+    // alert(address)
+    // 一次创建多个变量 并且赋值
+    // var age = 20,gender = "女",address = "深圳";
+    // alert(age)
+    // alert(gender)
+    // alert(address)
+
+    // 可以这么、写 但是会有变量名冲突问题
+    var age = 10;
+    // 重新声明变量
+    // var age = 20;
+    // 修改变量
+    // age = 20;
+    // alert(age);
+
+
+
+    // 创建常量  规范：常量名必须是大写  必须赋值
+    /* 
+      es5中一个问题
+    */
+    // var USERNAME = "张三";
+    // USERNAME = "李四"
+    // alert(USERNAME);
+    // var a = "张三";
+    // var b = "李四";
+    // var c;
+    // c = a;
+    // a = b;
+    // b = c;
+    // console.log(a,b,c)
+
+    // a = b;
+    // b = a;
+    // console.log(a,b)
+
+    // alert(a); // 张三 李四
+    // alert(b); // 李四 张三
+
+
+
+    // var b = "哈哈";
+    // 把b看做变量去找
+    // var a = b;
+    // console.log(a)
+
+    // 变量没有被声明就直接使用  会报错
+    // console.log(a);
+
+    // 报错以后的代码是不会被执行的
+    // console.log(a);
+    // alert("haha");
+
+
+
+    // 变量名 得有一些规矩
+    // console.log(username)
+    console.log(window)
+    /* 
+      变量名不能有(除了$和_)以外的特殊符号
+      不能以数字开头
+      不能是es中的保留字和关键字
+      必须以驼峰命名来取变量名
+        aaabbbccc   aaaBbbCcc
+    */
+
+    var dalanqiu = "打篮球";
+    var daLanQiu =  "打篮球";
+
+  </script>
+
+
+
+</body>
+
+</html>

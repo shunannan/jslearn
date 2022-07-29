@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            函数的作用
+                他可以将一些代码块封装起来在你想用的时候调用
+            为什么要封装
+                如果代码不封装的话会造成页面一打开代码就全部执行了，封装起来之后可以在你想用的时候才执行
+
+            创建函数的方法：
+                1.使用构造函数的形式创建函数-------一般不用
+                    var 变量名 = new Function(代码块)
+
+                2.使用字面量的形式创建函数
+                    var 变量名 = function(){
+                        代码块
+                    }
+
+                3.函数声明的形式创建函数-----------用的最多
+                    function 函数名(){
+                        代码块
+                    }
+        */
+
+        // var fun = new Function("alert()")
+
+
+        // var fun = function () {
+        //     console.log(111)
+        // }
+
+
+        // function fun() {
+        //     console.log(111)
+        // }
+
+        var a = 10
+        function f1() {
+            var a = 20
+            var b = 20
+            return function f2() {
+                var c = a + b
+                return window.a + a
+            }
+            var a = 30
+        }
+
+       
+        var b = f1()()
+
+        console.log(window.a);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // setTimeout(() => {
+    //     window.location.href = 'http://www.baidu.com'
+    // }, 5000)
+
+    // 假设这个函数是第三方的，不可修改
+let countTotal = function (obj, callback) {
+    let name = obj.name
+    let country = obj.country
+    let english = obj.english
+    let math = obj.math
+    let sport = obj.sport
+
+    let total = english + math + sport
+
+    callback(name, total)
+}
+
+// countTotal({
+//     name: 'jim',
+//     country: 'england',
+//     english: 90,
+//     math: 88,
+//     sport: 86
+// }, function (mingzi, zonghe) {
+//     console.log(`my name is ${mingzi}, total is ${zonghe}`)
+// })
+
+// countTotal({
+//     name: '李健熙',
+//     country: 'korea',
+//     english: 90,
+//     math: 88,
+//     sport: 86
+// }, function (name, total) {
+//     console.log(`제 이름은요 ${name}, 총 성적은 ${total}`)
+// })
+
+// 下面的调用，在回调函数里用中文打印：大家好，我是xxx，我的总成绩是 xxx
+countTotal({
+    name: '张三',
+    country: '中国',
+    english: 75,
+    math: 98,
+    sport: 96
+}, (name, total) => {
+    console.log('大家好，我是'+ name + '我的总成绩是' + total);
+}) 
+</script>
+
+</html>

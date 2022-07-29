@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    /* 
+      循环：
+        不断去干一件事情
+        while(条件表达式){
+          循环代码块
+        }
+        当条件表达满足的时候就会执行循环代码块
+    */
+    /* 死循环 */
+    //  while(true){
+    //    document.write(1)
+    //  }
+
+    // var flag = true;
+    // 1.初始值
+    // var count = 0;
+    // // 2.条件判断
+    // while(count < 5){
+    //   document.write(1);
+    //   // 3.条件更新
+    //   count++
+    // }
+
+    /* 
+      在页面中去输出1-10
+    */
+
+    // var n = 0;
+    // while(n < 10){
+    //   document.write(n);
+    //   n++;
+    // }
+
+    /* 
+      输出1-100之间的偶数 并且求出他们的和
+    */
+
+    // var n = 1;
+    // var sum = 0;
+    // while (n <= 100) {
+    //   if (n % 2 === 0) {
+    //     document.write(n);
+    //     // sum = sum + n;
+    //     sum += n;
+    //   }
+    //   n++;
+    // }
+    // console.log(sum)
+
+    /* 
+      计算 100 到 1000之间的三位数的水仙花数有哪些
+    */
+    // var n = 100;
+    // while (n < 1000) {
+    //   var ge = n % 10;
+    //   var shi = parseInt(n / 10) % 10;
+    //   var bai = parseInt(n / 100);
+    //   if (n === ge * ge * ge + shi * shi * shi + bai * bai * bai) { 
+    //     document.write(n+"<br>");
+    //   }
+    //   n++;
+    // }
+
+
+    var username1 = prompt("请第一位玩家输入姓名");
+    var flag = true;
+    var quanfa1;
+    var quanfa2;
+    while (flag) {
+      quanfa1 = prompt("请" + username1 + "出拳(石头,剪刀,布)")
+      if (quanfa1 === "石头" || quanfa1 === "剪刀" || quanfa1 === "布") {
+        flag = false
+      } else {
+        alert("请合法出拳");
+      }
+    }
+
+    
+
+    var username2 = prompt("请输入二个用户名");
+    flag = true;
+    while (flag) {
+      quanfa2 = prompt("请" + username2 + "出拳(石头,剪刀,布)")
+      if (quanfa2 === "石头" || quanfa2 === "剪刀" || quanfa2 === "布") {
+        flag = false
+      } else {
+        alert("请合法出拳");
+      }
+    }
+
+    // 比较
+    if (quanfa1 === "石头" && quanfa2 === "剪刀" || quanfa1 === "剪刀" && quanfa2 === "布" || quanfa1 === '布' && quanfa2 === "石头") {
+      // 第一位玩家
+      alert(username1 + "出了：" + quanfa1 + "\n" + username2 + "出了:" + quanfa2 + "\n" + username1 + " 赢了")
+    } else if (quanfa1 === quanfa2) {
+      // 平局
+      alert(username1 + "出了：" + quanfa1 + "\n" + username2 + "出了:" + quanfa2 + "\n平局")
+    } else {
+      // 玩家二赢了
+      alert(username1 + "出了：" + quanfa1 + "\n" + username2 + "出了:" + quanfa2 + "\n" + username2 + " 赢了")
+    }
+  </script>
+
+
+
+</body>
+
+</html>

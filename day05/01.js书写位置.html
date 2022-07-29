@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 3.新建js文件 然后引入的形式 -->
+  <!-- 如果js是引入的形式的  那么在该标签里面就不能在继续写js代码 -->
+  <!-- <script src="./index.js"></script> -->
+  <script>
+    // alert("内部的js代码")
+  </script>
+</head>
+
+<body>
+  <!-- 2.script标签之间去写 -->
+  <script>
+    // window.onload = function () {
+    document.querySelector("button").onclick = function () {
+      alert("弹出")
+    }
+    // }
+  </script>
+  <!-- 
+  html ：超文本标记语言
+  css：层叠样式表
+  javascript:编程语言  让网页活起来  实现  js
+    ecmascript: 标准    es === js  es12
+    es5  + es6 7
+    https://baike.baidu.com/item/JavaScript/321142?fr=aladdin
+
+    ECMA: 标准  基础的语法 规则规范
+    DOM: 文档对象模型
+    BOM: 浏览器对象模型
+ -->
+
+
+
+  <!-- 1.可以在标签中写 -->
+  <!-- <button onclick="alert('弹窗')">按钮</button> -->
+  <button>按钮</button>
+
+
+
+
+
+</body>
+
+</html>

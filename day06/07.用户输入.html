@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+
+    // var age = prompt("请输入一个年龄")
+    // console.log(age)
+    // console.log(typeof age)
+    /* 
+      让用户输入一个数字
+        1.如果用户点了取消 或者说没输入内容 或者说不是数字 弹窗 提示请输入合法的数字
+        2.如果说用户输入的是合法的数 判断是否是一个整数 如果不是整数 提示请输入整数
+        3.如果说用户输入的是整数 弹窗是奇数还是偶数
+    */
+    var n = prompt('请输入一个数字');
+    // 去除字符串两端的空格
+    // n = n.trim()
+    // n = null  n = ""  n ="asdkljasld" n = "2.3"
+    // !isNaN(n) && n !== null && n !== "" ? n % 1 === 0 ? n % 2 === 0 ? alert('偶数') : alert("奇数") : alert("提示请输入整数") : alert("提示请输入合法的数字")
+    n === null || isNaN(n) ? alert("请输入合法数字"): n % 1 == 0 ? n % 2 == 0 ? alert("偶数") : alert("奇数") : alert("请输入一个整数")
+// var a = " 123 "
+// console.log(a.trim())
+
+
+  </script>
+
+
+</body>
+
+</html>

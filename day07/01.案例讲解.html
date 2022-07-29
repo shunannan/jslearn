@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.让用户输入一个数字判断是否是水仙花数  100-999之间的数字   398  === 3*3*3+9*9*9+8*8*8
+    // var num = prompt("请输入一个数字");
+    // var ge = num % 10;
+    // var shi = parseInt(num / 10) % 10;
+    // var bai = parseInt(num / 100);
+    // ge * ge * ge + shi * shi * shi + bai * bai * bai == num ? alert('水仙花数') : alert("不是水仙花数");
+
+    // 2.让用户输入一个数字,判断该数字是否是7 的倍数
+    // var num = prompt("请输入一个数字");
+    // num % 7 === 0 ? alert('就是7的倍数') : alert('不是7的倍数')
+
+
+    // 3.让用户输入连续输入3个数字 得到这3个数字的和  并且获取到这三个数字中的最大值
+    // var n1 = +prompt("请输入第一个数字");
+    // var n2 = +prompt("请输入第二个数字");
+    // var n3 = +prompt("请输入第三个数字");
+    // var sum = n1 + n2 + n3;
+    // var max = 0;
+    // max = n1 > n2 && n1 > n3 ? n1 : n2 > n1 && n2 > n3 ? n2 : n3;
+    // alert(sum)
+    // alert(max)
+
+    // 4.让用户账号和密码判断账号和密码是否等于 '张三' 和 '123456' 是就弹窗登录成功  不是就弹窗登录失败
+
+    // var username = prompt("请输入用户名");
+    // var password = prompt("请输入密码");
+    // username == "张三" && password == "123456" ? alert("登录成功") : alert("登录失败")
+
+
+
+
+
+
+
+
+    // var num = prompt("")
+    // num < 10 && num > 0 ? alert("0" + num) + num : alert(num)
+
+
+
+    // var num = prompt("请输入您的成绩")
+    // isNaN(num) || num > 100 || num < 0 ? alert("您的成绩无效") : num < 60 ? alert("不及格") : num < 90 ? alert("合格") : alert("优秀")
+
+
+    // var num = prompt("请输入年份")
+    // num % 4 == 0 && num % 100 != 0 || num % 400 == 0 ? alert("yes") : alert("no")
+
+
+
+    var str = ""
+    for (var i = 1; i <= 9; i++) {
+      for (var j = 1; j <= i; j++) {
+        str += j + "*" + i + "=" + i * j + " ";
+      }
+      str += "\n"
+    }
+    console.log(str)
+
+
+
+
+    for (var i = 1; i <= 9; i++) {
+      var str = ""
+      for (var j = 1; j <= i; j++) {
+        str += j + "*" + i + "=" + i * j + " ";
+      }
+      console.log(str)
+    }
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

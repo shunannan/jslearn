@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var username1 = prompt("请输入玩家一的用户名");
+    var quanfa1 = prompt("请" + username1 + "出拳(石头,剪刀,布)");
+    if (quanfa1 == "石头" || quanfa1 == "剪刀" || quanfa1 == "布") {
+      var username2 = prompt("请输入玩家二的用户名");
+      var quanfa2 = prompt("请" + username2 + "出拳(石头,剪刀,布)");
+      if (quanfa2 === "石头" || quanfa2 === "剪刀" || quanfa2 === "布") {
+        // 比较
+        if (quanfa1 === "石头" && quanfa2 === "剪刀" || quanfa1 === "剪刀" && quanfa2 === "布" || quanfa1 === '布' && quanfa2 === "石头") {
+          // 第一位玩家
+          alert(username1 + "出了：" + quanfa1 + "\n" + username2 + "出了:" + quanfa2 + "\n" + username1 + " 赢了")
+        } else if (quanfa1 === quanfa2) {
+          // 平局
+          alert(username1 + "出了：" + quanfa1 + "\n" + username2 + "出了:" + quanfa2 + "\n平局")
+        } else {
+          // 玩家二赢了
+          alert(username1 + "出了：" + quanfa1 + "\n" + username2 + "出了:" + quanfa2 + "\n" + username2 + " 赢了")
+        }
+      } else {
+        alert("您输入的拳法有误");
+      }
+    } else {
+      alert("您输入的拳法有误");
+    }
+  </script>
+</body>
+
+</html>

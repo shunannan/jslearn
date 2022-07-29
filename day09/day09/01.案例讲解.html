@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    /* 
+     练习：
+     1.让用户输入相关信息 生成以下这个对象
+     2.把该对象里面的所有对象全部取出来 成为独立的对象
+   */
+    // var o = {
+    //   name: '张三',
+    //   family: {
+    //     mom: {name: '秀琴',gender: '女'},
+    //     dad: {name: "铁柱",gender: '男'}
+    //   },
+    //   age: 13,
+    //   gender: '男',
+    //   address: {city: '深圳',distr: '宝安区',deatil: '顺丰路18号'}
+    // }
+
+    
+    // var o = {};
+    // o.name = prompt("您的姓名:");
+    // o.age = prompt("您的年龄是:");
+    // o.gender = prompt("您的性别:");
+    // o.family = {}
+    // o.family.mom = {}
+    // o.family.dad = {}
+
+    // o.family.mom.name = prompt("您妈的姓名是：")
+    // o.family.mom.gender = "女"
+    // o.family.dad.name = prompt("您爸的姓名是：")
+    // o.family.dad.gender = "男"
+
+
+
+
+      // window 全局对象
+
+
+    var o = {
+      a:{name:'张三'},
+      b:{name:'李四',age:14},
+      name:'oo'
+    }
+
+    for(var key in o){
+      if(typeof o[key] === "object"){
+        window[key] = o[key]
+      }
+    }
+
+    console.log(a)
+    console.log(b)
+
+
+
+    // var a = 10;
+    // console.log(window.a)
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    // var o2 = o
+    // var o3 = new Object()
+    // o3.family = {
+    //   mom: '桂花'
+    // }
+    // o2 = o3
+    // o2.family = {
+    //   mom: '翠花'
+    // }
+
+    // console.log(o)
+    // console.log(o2)
+    // console.log(o3)
+
+
+
+  </script>
+
+</body>
+
+</html>

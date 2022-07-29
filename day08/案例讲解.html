@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+
+
+
+    //   2 3 5 组成20块钱的方案有几种 
+    //  10 * 2  3 * 6   5 * 4
+
+    // for (var i = 0; i <= 10; i++) {
+    //   for (var j = 0; j <= 6; j++) {
+    //     for (var k = 0; k <= 4; k++) {
+    //       if (i * 2 + j * 3 + k * 5 === 20) {
+    //         document.write("i=" + i, "j=" + j, "k=" + k)
+    //         document.write("<br>")
+    //       }
+    //     }
+    //   }
+    // }
+
+    // 2.骰子游戏  >=10 大  小于10 就是小
+    //   1.输入用户名  用户名不能为空
+    //   2.问玩家玩几次游戏  次数得是大于0的整数
+    //   3.开始游戏 提示第几次游戏
+    //   4.请猜大小
+    //   5.押注金额 必须大于0金额
+    //   6.判断是否猜中
+    //   7.当游戏结束 统计是赢了还是输了多少钱
+    //   8.全程不能取消游戏  自然结束
+
+    // var username;
+    // var count;
+    // var bigAndSmall;
+    // var money;
+    // var totalM = 0;
+    // do {
+    //   username = prompt("请输入一个用户名:") || "";
+    //   if (username.trim() !== "") {
+    //     break;
+    //   } else {
+    //     alert("不能为空或者取消")
+    //   }
+    // } while (true)
+
+
+    // do {
+    //   count = prompt("请问您要玩几次游戏?")  //不是数字  数字   "" null
+    //   if (!isNaN(count) && count !== null && count.trim() !== "" && count % 1 === 0 && count > 0) {
+    //     break;
+    //   } else {
+    //     alert("请输入一个合法的正整数，或者不能取消")
+    //   }
+    // } while (true)
+    // // 游戏过程
+    // var bsStr = ''
+    // for (var i = 0; i < count; i++) {
+    //   var dis1 = parseInt(Math.random() * 6) + 1
+    //   var dis2 = parseInt(Math.random() * 6) + 1
+    //   var dis3 = parseInt(Math.random() * 6) + 1
+    //   var sum = dis1 + dis2 + dis3;
+    //   bsStr = sum > 10 ? "大" : '小'
+    //   alert("第" + (i + 1) + "次游戏开始了");
+    //   do {
+    //     bigAndSmall = prompt("请猜大或者小");
+    //     if (bigAndSmall === "大" || bigAndSmall === "小") {
+    //       break;
+    //     } else {
+    //       alert("只能猜大或者小")
+    //     }
+    //   } while (true)
+
+    //   do {
+    //     money = prompt("请压住一个大于0的金额");
+    //     if (money > 0) {
+    //       break;
+    //     } else {
+    //       alert("必须是押注大于0 的金额")
+    //     }
+    //   } while (true)
+
+
+    //   /*
+    //     两种 赢  猜大开了大   猜小开了小  输  猜了大 开了小   猜小开大
+    //   */
+    //   if (bigAndSmall === "大" && sum > 10 || bigAndSmall === "小" && sum <= 10) {
+    //     // 赢了
+    //     totalM += +money
+    //     alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数:" + sum + "点 \"" + bsStr + "\"\n" + username + "猜了" + bigAndSmall + "赢了\n押注金额是:" + money + "\n赢取:" + money)
+    //   } else {
+    //     //输了
+    //     totalM -= +money
+    //     alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数:" + sum + "点 \"" + bsStr + "\"\n" + username + "猜了" + bigAndSmall + "输了\n押注金额是:" + money + "\n输了:" + money)
+    //   }
+    // }
+
+    // // 判断输赢
+    // if(totalM >0){
+    //   //赢了
+    //   alert("总共赢了"+ totalM)
+    // }else if(totalM == 0){
+    //   //打和
+    //   alert("打平")
+    // } else {
+    //   //输了
+    //   alert("总共输了"+ (-totalM))
+    // }
+  </script>
+
+</body>
+
+</html>

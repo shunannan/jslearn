@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骰子游戏</title>
+</head>
+
+<body>
+    <script>
+        // var isStart = prompt("要开始游戏吗？(yes/no)")
+        // if (isStart === "yes") {
+        //     var total = 0
+        //     var flag = true
+        //     do {
+        //         var username = prompt("请输入您的用户名！！！")
+        //         if (+username !== 0) {
+        //             flag = false
+        //         } else {
+        //             alert("请您输入正确的用户名！！！")
+        //         }
+        //     } while (flag)
+
+        //     flag = true
+
+        //     var count;
+        //     do {
+        //         count = prompt("请问您要玩几把？")
+        //         if (!isNaN(count) && count > 0) {
+        //             flag = false
+        //         } else {
+        //             alert("请输入一个大于0的合法数字")
+        //         }
+        //     } while (flag)
+
+        //     // flag = true
+
+        //     for (var i = 0; i < count; i++) {
+        //         alert("第" + (i + 1) + "把游戏开始了")
+        //         var bigAndSmall;
+        //         do {
+        //             flag = true
+        //             bigAndSmall = prompt("请猜大小")
+        //             if (bigAndSmall === "大" || bigAndSmall === "小") {
+        //                 flag = false
+        //             } else {
+        //                 alert("请输入大或者小")
+        //             }
+        //         } while (flag)
+
+
+        //         var money;
+        //         do {
+        //             flag = true
+        //             money = prompt("请下注")
+        //             if (!isNaN(money) && money > 0) {
+        //                 flag = false
+        //             } else {
+        //                 alert("请您下注大于0的金额")
+        //             }
+        //         } while (flag)
+
+
+        //         var dis1 = parseInt(Math.random() * 6) + 1
+        //         var dis2 = parseInt(Math.random() * 6) + 1
+        //         var dis3 = parseInt(Math.random() * 6) + 1
+        //         var sum = dis1 + dis2 + dis3
+
+
+        //         if (sum >= 10 && bigAndSmall === "大") {
+        //             // 筛子的点数和猜的点数都为大   赢了
+        //             total += +money
+        //             alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数:" + sum + "点\"大\"\n下注:" + money + "\n赢了:" + money)
+        //         } else if (sum < 10 && bigAndSmall === "小") {
+        //             // 筛子的点数和猜的点数都为小   赢了
+        //             total += +money
+        //             alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数:" + sum + "点\"小\"\n下注:" + money + "\n赢了:" + money)
+        //         } else if (sum >= 10 && bigAndSmall === "小") {
+        //             // 筛子的点数为大猜的点数为小   输了
+        //             total -= +money
+        //             alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数:" + sum + "点\"大\"\n下注:" + money + "\n输了:" + money)
+        //         } else if (sum < 10 && bigAndSmall === "大") {
+        //             // 筛子的点数为小猜的点数为大   输了
+        //             total -= +money
+        //             alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数:" + sum + "点\"小\"\n下注:" + money + "\n输了:" + money)
+        //         }
+        //     }
+
+        //     if (total > 0) {
+        //         alert("您赢了" + total + "注")
+        //     } else if (total == 0) {
+        //         alert("打平了")
+        //     } else {
+        //         alert("您输了" + -total + "注")
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+        // 1.输入用户名  用户名不能为空
+        // 2.问玩家玩几次游戏  次数得是大于0的整数
+        // 3.开始游戏 提示第几次游戏
+        // 4.请猜大小
+        // 5.押注金额 必须大于0金额
+        // 6.判断是否猜中
+        // 7.当游戏结束 统计是赢了还是输了多少钱
+        // 8.全程不能取消游戏  自然结束
+
+
+
+        // var dis1 = parseInt(Math.random() * 6) + 1
+        // var dis2 = parseInt(Math.random() * 6) + 1
+        // var dis3 = parseInt(Math.random() * 6) + 1
+        // var sum = dis1 + dis2 + dis3
+        // var panduan = sum >= 10 ? "大" : "小"
+        // console.log(sum, panduan)
+
+        // var isStart = prompt("请问是否开始游戏？(yes/no)")
+        // if (isStart === "yes") {
+        //     var user;
+        //     var flag = true
+        //     do {
+        //         user = prompt("请输入您的用户名") || ""
+        //         if (user !== "") {
+        //             flag = false
+        //         } else {
+        //             alert("请您输入用户名！！！")
+        //         }
+        //     } while (flag)
+
+        //     var count;
+        //     flag = true
+        //     do {
+        //         count = prompt("请问您要玩几次？")
+        //         if (!isNaN(count) && count > 0) {
+        //             flag = false
+        //         } else {
+        //             alert("请输入一个大于0的合法数字")
+        //         }
+        //     } while (flag)
+
+        //     var total = 0;
+        //     var bigAndSmall;
+        //     for (var i = 0; i < count; i++) {
+        //         alert("第" + (i + 1) + "把游戏开始")
+        //         do {
+        //             flag = true
+        //             bigAndSmall = prompt("请猜大小")
+        //             if (bigAndSmall === "大" || bigAndSmall === "小") {
+        //                 flag = false
+        //             } else {
+        //                 alert("请输入\"大\"或者\"小\"")
+        //             }
+        //         } while (flag)
+
+        //         var money;
+
+        //         do {
+        //             flag = true
+        //             money = prompt("请下注金额")
+        //             if (!isNaN(money) && money > 0) {
+        //                 flag = false
+        //             } else {
+        //                 alert("请输入一个大于0的合法数字")
+        //             }
+        //         } while (flag)
+
+        //         var dis1 = parseInt(Math.random() * 6) + 1
+        //         var dis2 = parseInt(Math.random() * 6) + 1
+        //         var dis3 = parseInt(Math.random() * 6) + 1
+        //         var sum = dis1 + dis2 + dis3
+        //         var panduan = sum >= 10 ? "大" : "小"
+        //         // console.log(sum,panduan)
+
+        //         if (panduan == "大" && bigAndSmall == "大" || panduan == "小" && bigAndSmall == "小") {
+        //             total += money
+        //             alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数为:" + sum + "\n下注了:" + money + "\n赢了:" + money)
+        //         } else {
+        //             total -= money
+        //             alert("第一颗骰子是:" + dis1 + "点\n第二颗骰子是:" + dis2 + "点\n第二颗骰子是:" + dis3 + "点\n总点数为:" + sum + "\n下注了:" + money + "\n输了:" + money)
+        //         }
+        //     }
+        //     if (total > 0) {
+        //         alert("您赢了" + total + "注")
+        //     }else if(total == 0){
+        //         alert("打平了")
+        //     }else{
+        //         alert("您输了" + -total + "注")
+        //     }
+        // } else {
+        //     alert("您未开始游戏！！！")
+        // }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

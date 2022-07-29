@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+    
+    /* 
+      伪数组
+    */
+    var arr = {
+      [0]:'张三',
+      [1]:'李四',
+      length:2
+    }
+    var arr1 = ["张三"]
+
+    var str = "1"
+
+    // es6新增 判断是否是数组 如果是数组返回true 不是数组返回false
+    // console.log(Array.isArray(arr))
+    // console.log(Array.isArray(arr1))
+
+
+    // 为true的是数组
+    // console.log(Object.prototype.toString.call(arr) === "[object Array]")
+    // console.log(Object.prototype.toString.call(arr1) === "[object Array]")
+
+
+    // 为true 是数组
+    // console.log(arr.constructor === Array)
+    // console.log(arr1.constructor === Array)
+
+    // 为true也是数组
+    // console.log(str instanceof String)
+    // console.log(arr1 instanceof Array)
+
+
+    // 满足条件是数组
+    // console.log(arr.__proto__ === Array.prototype)//false
+    // console.log(arr1.__proto__ === Array.prototype) //true
+
+
+    
+    // console.log(typeof arr)
+    // console.log(typeof arr1)
+    // console.log(arr.length)
+    // console.log(arr1.length)
+    // console.log(arr)
+    // console.log(arr1[0])
+
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>

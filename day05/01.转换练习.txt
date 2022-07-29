@@ -1,0 +1,53 @@
+﻿		第一题：
+			var c ="张三"; 
+			c=(!Boolean(Number(c))).toString();
+			console.log(c); //true
+			console.log(typeof c); //string
+
+		第二题：
+			var d = undefined;  
+			d=Boolean(Number(Number(d).toString()));
+			console.log(d); //false
+			console.log(typeof d); //boolean
+
+		第三题：
+			var e =true;
+			e=!!(Number(e).toString());
+			console.log(e); //true
+			console.log(typeof e); //boolean
+
+		第四题：
+			var f = "";   
+			f = (!!Boolean(Number(f).toString())).toString();
+			console.log(f); //true
+			console.log(typeof f); //string
+
+		第五题：
+			var g = Infinity;
+		   	g = !!!(g.toString())
+			console.log(g); //false
+			console.log(typeof g); //boolean
+
+		第六题：
+			var a = 10;
+			a = String(!Boolean(Number(String(a))));
+			console.log(a); //false
+			console.log(typeof a); //string
+
+		第七题：
+			var b =0;
+			b=Number(Boolean(b.toString()));
+			console.log(b); //NAN
+			console.log(typeof b) //Number
+
+		第八题：
+			var l = +null;
+			l = parseFloat(!Boolean(l).toString)
+			console.log(l); //NAN
+			console.log(typeof l); //number
+
+		第九题：
+			var x = +undefined; 
+			x = !!!(+(x+""))
+			console.log(x); //true
+			console.log(typeof x) //boolean

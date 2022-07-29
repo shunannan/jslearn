@@ -1,0 +1,134 @@
+﻿// 1.创建一个join函数,该函数能传入两个参数，第一个：
+//  		第一个参数为：数组
+//  		第二个为：字符串
+//  最终调用这个函数时，返回一个字符串
+//  最终如：join([1,2,3,4,5],"-")最终返回 '1-2-3-4-5'  注：不能使用数组的join方法
+
+// function join(arr, str) {
+//     var str1 = "";
+
+//     for (var i = 0; i<arr.length;i++) {
+//         if(i == arr.length-1) {
+//             str1 += arr[i];
+//             break
+//         }
+//         str1 += arr[i] + str
+//     }
+//     return str1;
+// }
+// var arr = [1,2,3,4,5,6,7,89,0]
+// var a = join(arr," ")
+// console.log(a)
+
+
+// 2.写一个加减乘除求余的jisuan函数，三个参数，前两个是运算的数字，第三个代表运算操作符，结果不打印，但是要有返回值
+// 最终如如 jisuan(1,2,"+")  最终返回3
+
+// function jisuan(num1,num2,operator) {
+//     var sum = 0
+//     if(operator=="+") {
+//         sum = num1 + num2;
+//     }else if(operator=="-") {
+//         sum = num1 - num2;
+//     }else if(operator=="*") {
+//         sum = num1 * num2;
+//     }else if(operator=="/") {
+//         sum = num1 / num2;
+//     }
+//     return sum
+// }
+// var sum = jisuan(3,5,"/");
+// console.log(sum);
+
+
+// 3.创建一个截取数组函数  splice() 该函数传入3个参数
+//  	第一个参数：数组
+//  	第二个参数：截取开始索引 包含开始索引
+//  	第三个参数：截取个数
+//  	返回截取以后的新数组
+//  最终如如：splice([1,2,3,4,5,6,7],2,3)  最终返回得到 [3,4,5]  注：不能使用数组的splice方法
+// function splice(arr, num1, num2) {
+//     var arr1 = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if(i >= num1&&i<num2+num1) {
+//             arr1.push(arr[i])
+//         }
+//     }
+//     return arr1
+// }
+// var arr = [1,2,3,4,5,6,8,7,9,66]
+// var arr1 = splice(arr,3,5)
+// console.log(arr1);
+
+
+
+// 4.创建一个可以去重的函数
+// 传入一个数组，能把重复的东西去掉，返回一个新的数组
+// function quchong(arr) {
+//     var arr1 = []
+//     for (var item of arr) {
+//         if (arr1.indexOf(item) == -1) {
+//             arr1.push(item)
+//         }
+//     }
+//     return arr1
+// }
+// var arr = [1, 2, 3, 4, 5, 6, 8, 7, 9, 66, 1, 2, 3, 4, 5, 6, 7]
+// var arr1 = quchong(arr)
+// console.log(arr1);
+
+
+// 5.创建一个函数，可以计算N个数字的最小值
+//     如：min(1,2,3,4,5...) 得到1
+// function min() {
+//     var min = Infinity;
+//     for (var i = 0; i < arguments.length; i++) {
+//         i < min ? min = i : min
+//     }
+//     return min
+// }
+// var a = min(0,1,2,3,4,5,6,7,8,55,44,33);
+// console.log(a)
+
+
+// 6.创建一个阶乘函数 当传入一个6时 返回1*2*3*4*5*6的结果
+// function factorial(num) {
+//     var sum = 1;
+//     for(var i = 1; i<=num; i++) {
+//         sum*=i
+//     }
+//     return sum
+// }
+// var sum = factorial(3);
+// console.log(sum);
+
+
+// 7.创建一个可以计算某个数n次幂的函数  参数：pow(3,4) 就表示3的4次方 并且返回结果
+// function pow(num1, num2) {
+//     var sum = 1;
+//     for (var i = 1; i <= num2; i++) {
+//         sum *= num1
+//     }
+//     return sum
+// }
+// var sum = pow(3,3)
+// console.log(sum);
+
+
+// 8.怎么调用f2的函数，a+b的结果是什么？f2返回的结果是什么？
+// var a = 10
+// function f1(){
+//      var a = 20
+//      var b = 20
+//      return function f2(){
+//          var c = a+b
+//          return window.a + a
+//      }
+//      var a = 30
+// }
+
+// f1()()
+
+// 怎么调用f2的函数: f1()()
+// a+b的结果是什么 : 40
+// f2返回的结果是什么: 30

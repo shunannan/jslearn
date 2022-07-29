@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      任何数据(String的的加除外)和NaN进行运算 都会返回NaN
+      +
+        任何数据类型和String相加都会进行拼串效果
+        其余数据类型进行相加 会先转换成Number类型然后进行相加运算
+      -
+        任何数据类型进行相减 都会先自动转换成Number然后进行运算
+      *
+        任何数据类型进行相乘 都会先自动转换成Number然后进行运算
+      /
+        任何数据类型进行相除 都会先自动转换成Number然后进行运算
+      % 模 取余
+        任何数据类型进行相模 都会先自动转换成Number然后进行运算
+    */
+
+    // var a = 10+"10";
+    // var a = 10+undefined;
+    // var a = 10+null;
+    // console.log(a)
+
+    // var a = 10 - "aa"
+    // console.log(a);
+    // console.log(typeof a);
+
+
+    // var a = 100 % 2 == 0;
+    // var a = 1.5 % "nuasdasd";
+    // var a = 10 % 3
+    // console.log(a);
+    // console.log(typeof a);
+
+    // 拼接效果
+    // var usernmae = "张三";
+    // var age = 13;
+    // var gender = "男";
+    // console.log('大家好,我的名字叫' + usernmae + ',今年多少' + age + '岁了,性别是：' + gender)
+
+    // var n1 = 10;
+    // var n2 = 20;
+
+    // var n = n1++;
+
+    // console.log('n=' + n);        //n=10
+    // console.log('n1=' + n1);      //n1=11
+
+    // n = ++n1;
+    // console.log('n=' + n);      //n=12
+    // console.log('n1=' + n1);   //n1=12
+
+    // n = n2--;
+    // console.log('n=' + n);     //n=20
+    // console.log('n2=' + n2);    //n2=19
+
+    // n = --n2;
+    // console.log('n=' + n);     //n=18
+    // console.log('n2=' + n2);   //n2=18
+
+  </script>
+
+</body>
+
+</html>

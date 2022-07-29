@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+      数组： 通过下标
+        -用来存储数据的
+        key:value
+    */
+     
+    //  1.通过构造函数的形式创建数组
+        // var arr = new Array(10)  //将数组的长度变成10
+        // var arr = new Array(10,20)  //将10放第一个位置  将20放到第二个位置  长度2
+        // var arr = new Array("张三") //张三放到数组第一个位置
+
+    // var arr = new Array("张三","里斯");
+    // var arr = new Array(10);
+
+    // var arr = new Array();
+    // 添加数组 数组的长度是由最后一位数据来决定
+    // arr[0] = "张三";
+    // arr[1] = "李四";
+    // arr[2] = "王五";
+    // arr[5] = "赵六";
+    // console.log(arr[3],arr[4])
+
+    // 取数据 当取的哪项之前没有添加的时候返回的是undefined
+    // console.log(arr[3]);  //[]
+    // console.log(arr.length);
+    // console.log(typeof arr); //object
+
+    // 2.使用字面量的形式创建数组
+    // var arr = ["张三","李四"];
+    // console.log(arr[1]);
+    // console.log(typeof arr);
+
+    /* 数组里面可以放任何数据类型 */
+    // var arr = [1,true,undefined,null,'字符串'];
+    // console.log(arr)
+
+    // var o = {
+    //   name:'张三',
+    //   age:13
+    // }
+
+    // var arr = ["李四",{
+    //   name:'张三',
+    //   age:13
+    // }]
+    // console.log(arr[1].name)
+
+
+    // 二维的数组
+    // var arr = [1,2,3,[4,5]]
+    // console.log(arr[3][0])
+    // 该数组的长度
+    // console.log(arr.length)
+
+
+    // 往arr这个数组的末尾一项去添加一个赵六
+    // var arr = ["张三","李四","王五"]  //[3]
+
+    // arr.length
+    // arr[arr.length] = "赵六"
+
+    // 直接覆盖原本的那一项
+    // arr[0] = "哈哈"
+
+    // console.log(arr)
+    // console.log(arr[arr.length - 1])
+
+    /* 
+      循环数组
+    */
+    // var arr = ["张三","李四","王五","赵六"]
+    // for(var i = 0; i < arr.length; i++){
+    //   console.log(arr[i])
+    // }
+
+
+    /* 让用户输入一个id号 然弹出该手机名称 */
+
+    var arr = [
+      { id: 1001, pro: '华为手机', price: 100 },
+      { id: 1002, pro: '苹果手机', price: 100 },
+      { id: 1003, pro: '小米手机', price: 100 },
+    ]
+
+    var pid = prompt("请输入一个id号");
+    var pro = ""
+    var index;
+    for (var i = 0; i < arr.length; i++) {
+      console.log(1)
+      // if(arr[i].id == pid){
+      //   alert(arr[i].pro)
+      //   break;
+      // }
+      if (arr[i].id == pid) {
+        pro = arr[i].pro
+        index = i
+        break;
+      }
+    }
+
+    if(index !== undefined){
+      alert(arr[index].pro)
+    }else{
+      alert("没有该手机")
+    }
+    // if(pro){
+    //   alert(pro)
+    // }else{
+    //   alert("没有该手机")
+    // }
+  </script>
+</body>
+
+</html>

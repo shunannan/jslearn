@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // var a = 10;
+    // var b = a;
+    // a++;
+    // console.log(a); // 11
+    // console.log(b); // 10
+
+    // var o1 = new Object()
+    // o1.name = "张三";
+    // var o2 = o1;
+    // o2.name = "李四"
+    // console.log(o1) //李四
+    // console.log(o2) //李四
+
+    // var obj = {
+    //   family:{
+    //     mom:'秀琴',
+    //     dad:'国立' //'铁柱'
+    //   }
+    // }
+    // var o2 = obj.family  //{ mom:'秀琴',dad:'国立'}
+    // o2.dad = "铁柱"  //{ mom:'秀琴',dad:'铁柱'}
+    // var o3 = obj  
+    // console.log(obj) //{}
+    // console.log(o2) //{}
+    // console.log(o3) //{}
+
+
+
+    /* 
+      练习：
+      1.让用户输入相关信息 生成以下这个对象
+      2.把该对象里面的所有对象全部取出来 成为独立的对象
+    */
+    var o = {
+      name: '张三',
+      family: {
+        mom: {
+          name:'秀琴',
+          gender:'女'
+        },
+        dad:{
+          name:"铁柱",
+          gender:'男'
+        }
+      },
+      age:13,
+      gender:'男',
+      address:{
+        city:'深圳',
+        distr:'宝安区',
+        deatil:'顺丰路18号'
+      }
+    }
+
+    var o2 = o
+    var o3 = new Object()
+    o3.family = {
+      mom:'桂花'
+    }
+    o2 = o3
+    o2.family = {
+      mom:'翠花'
+    }
+
+    console.log(o)
+    console.log(o2)
+    console.log(o3)
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

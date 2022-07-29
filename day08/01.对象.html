@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      基本数据类型
+      引用数据类型
+        Object 对象
+          -作用；存储数据的
+    */
+
+    // 1.使用构造函数的形式创建对象
+    // var o = new Object();
+
+    // console.log(o);
+    // console.log(typeof o); // object
+
+    // 2.往这个对象里面添加属性  对象名.属性名 = 属性值
+    // o.name = "张三";   key = value
+    // o.age = 13;
+    // 3.修改属性  对象名.属性名 = 新的属性值
+    // o.age = 14;
+    // 4.删除对象中的属性  delete 对象名.属性名
+    // delete o.age
+    // 5.使用对象
+    // console.log(o.name);
+
+    // var a = {name:"张三",age:"13"}
+    // console.log(a)
+
+
+
+
+    /* 
+      2.使用字面量的形式创建对象
+    */
+    // var o = {
+    //   name:'张三',
+    //   age:13
+    // };
+    // o.name = "里斯"
+    // delete o.name
+    // console.log(o.gender); //对象里面没有该属性 undefined
+    // console.log(typeof o);
+
+
+
+    var age = "哈哈"
+    var gender;
+
+    var o = new Object();
+    // console.log(o[age])
+    // // o['123'] = "张三";
+    // o["name"] = "张三"  //o.name = "张三";
+    o[age] = 13;  //  age.哈哈 = 13
+    // o[gender] = "男"; //o.undefined = "男"
+    console.log(o);
+    // console.log(o["哈哈"])
+
+
+    // var age = "haha"
+    // var o = {
+    //   age:13, //o.age = 13
+    //   ['age']:14, //o.age = 14
+    //   [age]:15 //o.haha=15
+    // }
+    // console.log(o)
+
+    /* 
+      枚举对象  循环对象
+    */
+    // var o = {
+    //   name:'张三',
+    //   age:13,
+    //   gender:'男',
+    // }
+    /* 
+      for(var key in 对象名){}
+    */
+
+    // for(var key in o){
+    //   // 对象中有几个属性就会执行几遍该代码  key 属性
+    //   console.log(o[key])
+    // }
+
+    // var obj = {
+    //   name:"张三",
+    //   age:13,
+    //   gender:'男'
+    // }
+
+    // // 创建一个新的对象的 把obj这个对象的内容复制过去  并且在age本身增加5岁
+    // var newObj = {}
+    // for(var key in obj){
+    //   // key : 属性    属性值 obj[key]
+    //   if(key === "age"){
+    //     newObj[key] = obj[key] + 5
+    //     continue;
+    //   }
+    //   newObj[key] = obj[key]
+    //     // newObj.key = obj[key]  //newObj.属性名 = 属性值
+    //     // obj[key] -> obj.key
+    // }
+
+    // console.log(newObj)
+
+
+
+
+  </script>
+</body>
+
+</html>

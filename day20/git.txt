@@ -1,0 +1,107 @@
+﻿svn:集中式版本控制工具，只有一个仓库，中央仓库，安装服务器的那台电脑
+
+git：分布式版本控制工具，每个人的电脑就是一个仓库
+
+git工作原理：
+	1.工作区域：你写代码的地方能看到的地方
+	2.暂存区：临时存储用的
+	3.历史区：生成版本用的
+
+
+  工作区 -> 暂存区 -> 历史区
+
+  clear ：清屏
+
+  1.告诉git我是谁？（在全局环境下配置基本信息）
+  		1）先查看是否已经告诉过
+  		git config --global -l   有名字和邮箱就不用配了 否则走
+  		2）.
+  			 配置用户名:`git config --global user.name "usernmae"`
+    		 配置邮箱:  `git config --global user.email "email"`  用你常用的邮箱
+
+
+  2.创建本地创库
+
+  		git init   会生成一个.git 隐藏文件夹
+
+
+  3.查看当前文件状态
+  		git status   （红色代表在工作区，绿色代表在暂存区，看不到就代表都在历史区了）
+
+  4.将工作中的文件提交到暂存区
+  		git add 文件路径  --提交单个路径
+  		git add .  -- 提交所有文件到暂存区
+
+  5.把暂存区的提交到历史区域
+  	git commit -m"描述信息"
+
+  6.查看日志
+	git log 查看历史提交的日志
+	git log --oneline 可以看到简洁版的日志
+
+  7.版本回退
+  	git reset --hard 版本号
+
+  8.查看所有提交版本
+  	git reflog
+
+  9.查看当前有哪些分支
+    git branch
+
+  10.创建了一个dev分支
+    git branch dev
+
+  11.切换分支
+    git checkout dev
+    
+  12.合并分支
+    git merge dev
+
+  13.合并冲突手动解决处理后还需要再提交一次
+
+  14.删除分支
+    git branch -d dev
+
+  GIT-HUB 代码管理平台,我们所熟知的插件，框架都在这个平台上面，我们可以直接看源码
+  https://github.com 
+	- 不是git,只是一个网站
+	- 只不过这个网站提供了允许别通过git上传代码的功能
+
+   1.查看现在是否有连接仓库
+   	 git remote -v
+
+  	2.git push 仓库地址 master  
+
+   3.起别名和远程仓库建立连接  origin自己随便取的名字，最好不要改就用origin
+     git remote add origin 仓库地址
+
+   4.把本地仓库提交到远程仓库 简写
+   git push -u origin  master  
+
+   5.删除仓库关联
+   	git remote rm origin
+
+   6.提交之前最好先把项目拉下来 
+   git pull origin master  
+   执行这句话如果拉不下来就 在后面加 --allow-unrelated-histories
+
+
+
+
+   7.平时开发基本都是项目经理或组长搭好架构，我们只需要clone下来就可以了
+
+   git clone 仓库地址
+   如果项目时克隆下来的就不用再连接了  并且上传只需git push 更新只需 git pull
+
+git remote add origin https://github.com/mayday1215/dgadmin.git
+git push -u origin master
+
+
+
+
+
+
+ 
+
+
+

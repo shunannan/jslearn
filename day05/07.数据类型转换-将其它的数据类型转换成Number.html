@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    /* 1.使用Number函数
+         String：
+          看该字符里面的内容是否合法如果合法返回合法数字
+          如果不合法返回NaN
+          空字符传返回0
+        Boolean：
+          true --- 1  false -- 0
+        undefined --- NaN
+        Null --- 0
+    */
+    // var a = true;
+    // a = Number(a);
+    // console.log(a);
+    // console.log(typeof a);
+
+
+    /* 
+      2.使用parseInt函数
+        String类型使用该方法
+          从第一个字符开始判断,直到碰到非法数字返回前面合法数字的部分
+          如果第一个就是非法数字返回NaN
+        其余的数据类型使用该方法全部返回NaN
+        1.34  转换成 1.3
+    */
+    //  var a = "12.34true123";
+    //  a = parseInt(a);
+    //  console.log(a);
+    //  console.log(typeof a);
+
+    /* 
+      3.使用parseFloat函数
+        String类型使用该方法
+          从第一个字符开始判断,直到碰到非法数字或者第二个小数点返回前面合法数字部分(包含小数)
+          如果第一个就是非法数字返回NaN
+        其余的数据类型使用该方法全部返回NaN
+    */
+    //  var a = "12.1.1true";
+    //  a = parseFloat(a);
+    //  console.log(a);
+    //  console.log(typeof a);
+
+    /* 
+      4.使用隐式转换  +
+        -该方式等同于Number函数
+    */
+    // var a = +true;
+    // console.log(a);
+    // console.log(typeof a);
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
