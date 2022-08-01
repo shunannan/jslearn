@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 所有的函数里面都有一个参数  this
+    // 普通函数里面的this window对象
+    // function fun(){
+    //   console.log(this)
+    // }
+    // fun()
+
+    var o = {
+      name:'张三',
+      // 当函数以某个对象方法的形式存在的时候 this指向的就是该对象
+      sayHi:function(){
+        console.log("大家好,我叫"+this.name)
+      }
+    }
+    o.sayHi()
+
+
+  </script>
+
+
+  
+</body>
+</html>
