@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 第二题：输入一个id循环下面数组id匹配的话就把当前数据弹框为	手机名：华为 \n价格：16000元
+        // var arr = [
+        //     { id: 1001, pro: 'iphone', price: 3000, count: 3 },
+        //     { id: 1002, pro: '华为', price: 3200, count: 5 },
+        //     { id: 1003, pro: '小米', price: 1000, count: 2 },
+        //     { id: 1004, pro: '三星', price: 3300, count: 3 },
+        // ]
+
+
+        // var pro = prompt()
+        // for (var item of arr) {
+        //     if (pro == item.id) {
+        //         alert("手机名：" + item.pro + "\n价格：" + item.count * item.price)
+        //     }
+        // }
+
+
+        // 第三题：把下面数组内的0添加到一个数组内其他数据添加到一个数组内
+        // var arr = [1, 3, 4, 5, 0, 0, 6, 6, 0, 5, 4, 7, 6, 7, 0, 5]
+        // var arr0 = [], arr1 = []
+        // for(var item of arr){
+        //     if(item == 0){
+        //         arr0.push(item)
+        //     }else(
+        //         arr1.push(item)
+        //     )
+        // }
+        // console.log(arr0,arr1)
+
+
+        // 第四题：打印出下面数组内0出现了几次
+        // var arr = [1, 3, 4, 5, 0, 0, 6, 6, 0, 5, 4, 7, 6, 7, 0, 5]
+        // var i = 0
+        // for (var item of arr) {
+        //     if (item == 0) {
+        //         i += 1
+        //     }
+        // }
+        // console.log(i)
+
+
+        // 第五题：将下面数组里面的0去掉并且排序之后再反转
+        // var arr = [1, 0, 4, 0, 9, 5, 2, 5, 8, 23, 5, 7, 4, 785, 0, 8, 68, 59, 0, 759, 5, 89, 4, 2, 9, 0, 0, 262]
+        // var arr1 = []
+        // for (var item of arr) {
+        //     if (item !== 0) {
+        //         arr1.push(item)
+        //     }
+        // }
+        // arr1.sort(function (n1, n2) {
+        //     return n1 - n2
+        // })
+        // arr1.reverse()
+        // console.log(arr1)
+
+
+        // 第六题：找出下面数组里全部0出现的位置并打印对应的下标
+        // var arr = [1, 0, 4, 0, 9, 5, 2, 5, 8, 23, 5, 7, 4, 785, 0, 8, 68, 59, 0, 759, 5, 89, 4, 2, 9, 0, 0, 262]
+        // for (var index in arr) {
+        //     if(arr[index] == 0){
+        //         console.log(index)
+        //     }
+        // }
+
+
+        // 第七题：输入学生信息（姓名，年龄，性别）组成一个对象（可输入多个学生信息）将学生信息（对象）添加到一个数组里面
+        // var a, b, c, d
+        // var arr = []
+        // a = +prompt("学生数量")
+
+        // for (var i = 0; i < a; i++) {
+        //     b = prompt("学生姓名")
+        //     c = prompt("学生年龄")
+        //     d = prompt("学生性别")
+        //     var obj = {}
+        //     obj.name = b
+        //     obj.age = c
+        //     obj.gender = d
+        //     arr.push(obj)
+        // }
+        // console.log(arr)
+
+
+        // 第八题：嵌套数组转对象
+        // var arr = [["name", "张三"], ["age", 18], ["gender", "男"]]
+        // var obj = {}
+        // for(var item of arr){
+        //     obj[item[0]] = item[1]
+        // }
+        // console.log(obj)
+
+
+        // 第九题：输入一个数字判断你这个数字在不在该数组在的话就返回相对应的线标不在的话就把他添加进去
+        // var arr = [1, 0, 4, 0, 9, 5, 2, 5, 8, 23, 5, 7, 4, 785, 0, 8, 68, 59, 0, 759, 5, 89, 4, 2, 9, 0, 0, 262]
+        // var pro = +prompt()
+        // var i
+        // for (var item of arr) {
+        //     if (item == pro) {
+        //         i = arr.indexOf(pro)
+        //         console.log(index)
+        //         break;
+        //     } else {
+        //         arr.push(pro)
+        //         console.log(arr)
+        //         break;
+        //     }
+        // }
+
+
+        // 第十题：输入两个数字起始和结束位置截取两个数字之间的数据单成一个数组并去重排序
+        // var arr = [1, 3, 5, 2, 3, 2, 5, 7, 3, 7, 8, 9, 3, 2, 0, 3, 1, 6, 8, 4, 6, 2, 7, 4, 1, 8, 3, 9, 0, 1, 6, 4, 9]
+        // var a, b
+        // a = prompt()
+        // b = prompt()
+        // var newArr = arr.slice(a, b)
+        // var Arr = []
+        // newArr.sort(function (n1, n2) {
+        //     return n1 - n2
+        // })
+        // for(var item of newArr){
+        //     if(Arr.indexOf(item) == -1){
+        //         Arr.push(item)
+        //     }
+        // }
+        // console.log(newArr,Arr)
+
+
+
+
+
+
+
+
+
+        // 第一题：封装一个函数将下面数组每一项的价格乘数量得到的结果放到一个数组里面
+        // var arr = [
+        //     { id: 1001, pro: 'iphone', price: 3000, count: 3 },
+        //     { id: 1002, pro: '华为', price: 3200, count: 5 },
+        //     { id: 1003, pro: '小米', price: 1000, count: 2 },
+        //     { id: 1004, pro: '三星', price: 3300, count: 3 },
+        // ]
+        // function fun(arr) {
+        //     var newArr = []
+        //     for (var item of arr) {
+        //         newArr.push(item.count * item.price)
+        //     }
+        //     return newArr
+        // }
+        // console.log(fun(arr))
+
+
+        // 第二题：封装一个函数嵌套数组转对象
+        // var arr = [["name", "张三"], ["age", 18], ["gender", "男"]]
+        // function fun(arr){
+        //     var obj ={}
+        //     for(var item of arr){
+        //         obj[item[0]] = item[1]
+        //     }
+        //     return obj
+        // }
+        // console.log(fun(arr))
+
+
+        // 第三题：封装一个函数传入一个数组把数组里面的0去掉返回一个新数组
+        // function fun(arr) {
+        //     var newArr = []
+        //     for (var item of arr) {
+        //         if (item !== 0) {
+        //             newArr.push(item)
+        //         }
+        //     }
+        //     return newArr
+        // }
+        // console.log(fun([0, 1, 0, 2, 0, 3, 0, 4]))
+
+
+        // 第四题：封装一个函数传入几个数字将传入的数字变成数组然后去重并排序最后返回
+        // function fun() {
+        //     var newArr = []
+        //     for (var item of arguments) {
+        //         if (newArr.includes(item) === false) {
+        //             newArr.push(item)
+        //         }
+        //     }
+        //     return newArr.sort(function (n1, n2) {
+        //         return n2 - n1
+        //     })
+        // }
+        // console.log(fun(1, 2, 3, 3, 2, 1))
+
+
+        // 第五题：下面代码中函数调用了几次输出了几次分别是什么结果？
+        // var obj = {
+        //     name: "张三",
+        //     f: function () {
+        //         console.log(this.name)
+        //     },
+        //     age: 13,
+        // }
+        // obj.f()
+        // var f = obj.f
+        // f()
+
+
+        // 第六题：下面函数的输出结果是什么
+        // var a = 10
+        // function fun() {
+        //     var a = 20
+        //     return function ff() {
+        //         console.log(window.a + a)
+        //         var a = 30
+        //     }
+        // }
+        // fun()()
+
+
+        // 第七题：我想要调用下面函数中的 f 函数该怎么调用？输出结果又是什么？
+        // function fun() {
+        //     var obj = {
+        //         name: "张三",
+        //         age: 13,
+        //         f: function () {
+        //             console.log(this.name)
+        //         }
+        //     }
+        //     return obj
+        // }
+        // fun().f()
+
+
+
+        // 第八题：下面函数的输出结果是什么？
+        // function fun() {
+        //     console.log(this.name)
+        // }
+        // var obj = {
+        //     name: "张三",
+        //     f: fun
+        // }
+        // obj.f()
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // var arr = [
+        //     { id:1001, product: "华为", price: 5000, count: 5 },
+        //     { id:1002, product: "小米", price: 3000, count: 3 },
+        //     { id:1003, product: "苹果", price: 8000, count: 1 },
+        //     { id:1004, product: "8848", price: 12000, count: 2 }
+        // ]
+
+        // keys()   获取每一项的下标
+        // values() 数组中的每一项数据
+        // entries()    会得到一个数组这个数组的第0项是每条数据的下标第1项是每条数据
+        // for (var item of arr.entries()) {
+        //     console.log(item[0],item[1])
+        // }
+
+
+        // 计数
+        // var a = arr.reduce(function (pre,item) {
+        //     // pre上一次循环得到的结果    第一次循环的时候   pre是第二个参数
+        //     console.log(pre,item.price)
+        //     return pre + item.price
+        //         // 0   +  5000
+        //         // 5000 + 3000
+        //         // 8000 + 8000
+        //         // 16000 + 12000
+        //         // 28000
+        // },1000)
+        // console.log(a)
+
+
+        // 查找满足条件的第一个数据的下标
+        // var a = arr.findIndex(function(item,index){
+        //     return item.id == 1001
+        // })
+        // console.log(a)
+
+
+        // 查找满足条件的那一项然后返回整条数据
+        // var a = arr.find(function (item){
+        //     if(item.price == 1000){
+        //         return item
+        //     }
+        // })
+        // console.log(a)
+
+
+        // 全满足条件返回true   只要一个不满足条件就返回false
+        // var a = arr.every(function (item){
+        //     return item.price < 10000
+        // })
+        // console.log(a)
+
+
+        // 只要有一项数据满足条件就返回true    全都不满足返回false
+        // var a = arr.some(function (item){
+        //     return item.price < 8000
+        // })
+        // console.log(a)
+
+
+        // 过滤：把满足条件的数据返回出去变成一个新的数组   有返回值需要接收
+        // var a = arr.filter(function (item){
+        //     return item.price !== 3000
+        // })
+        // console.log(a)
+
+
+        // 映射：返回的东西自动生成一个新的数组     有返回值需要接收
+        // var a = arr.map(function (item,index){
+        //     return item.price
+        // })
+        // console.log(a)
+
+
+        // var newArr = []
+        // 循环遍历数组
+        // item是数组的每一项数据   index数组的索引(下标)   arr当前数组
+        // arr.forEach(function (item,index,arr) {
+        //     newArr.push(item.price)
+        // })
+        // console.log(newArr)
+
+
+        // var newArr = []
+        // for (var i = 0; i < arr.length; i++) {
+        //     newArr.push(arr[i].price)
+        // }
+        // console.log(newArr)
+    </script>
+</body>
+
+</html>
