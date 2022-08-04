@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- <input type="text" value="我是表单" /> -->
+    <!-- <input type="radio" /> -->
+    <!-- <input type="checkbox" /> -->
+
+    <!-- <button>按钮</button> -->
+
+    <!-- <p>你好</p> -->
+    <!-- <div>你好</div> -->
+
+    <!-- <ul>你好</ul> -->
+
+    <!-- <a href="http://www.baidu.com">超链接</a> -->
+
+    <img src="./../dom/img/1.jpg" />
+
+
+
+    <script>
+        var inp = document.querySelector("input")
+
+        var btn = document.querySelector("button")
+
+        var img = document.querySelector("img")
+
+
+        // 标签都可以做点击事件
+        img.onclick = function () {
+            img.src = "./../dom/img/2.jpg"
+        }
+
+
+
+        // btn.onclick = function () {
+            // 获取表单value值
+            // console.log(inp.value)
+
+            // 更换表单value值
+            // inp.value = "大家好"
+
+            // 获取到单选框定位checked值
+            // console.log(inp.checked)
+
+
+            // 更改单选框的checked值      表单复选框和单选框更改checked值的方法一致
+            // if (inp.checked == true) {
+            //     inp.checked = false
+            // } else {
+            //     inp.checked = true
+            // }
+
+            // inp.checked = !inp.checked
+
+
+            // 更改当前点击的那一项的内容
+        //     this.innerHTML = "点击"
+
+        // }
+    </script>
+
+
+</body>
+
+</html>

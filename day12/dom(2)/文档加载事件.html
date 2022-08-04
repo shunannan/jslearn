@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 等页面加载完才执行后面函数里的代码
+        window.onload = function () {
+            // var btn = document.getElementById("btn")
+            // btn.onclick = function () {
+            //     alert("加载完成了")
+            // }
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <!-- <button id="btn">按钮</button> -->
+
+
+    <img
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp09%2F210F2130512J47-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662191792&t=997dc1e07ec83a7c746fd99aae862454">
+
+    <script>
+
+        var img = document.getElementsByTagName("img")[0]
+
+        // 图片加载事件 等图片加载完才执行后面函数里面的代码
+        img.onload = function () {
+            console.log(111)
+        }
+
+    </script>
+
+</body>
+
+</html>

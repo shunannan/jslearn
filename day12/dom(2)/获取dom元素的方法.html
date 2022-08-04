@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="box" name="aa">类名的div1</div>
+    <div class="box" name="aa">类名的div2</div>
+    <div class="box" name="aa">类名的div3</div>
+
+
+    <div id="boxid">
+        <div>ID的div</div>
+    </div>
+
+    <script>
+        // 用id来获取dom元素            获取的是单个dom元素
+        // var box = document.getElementById("boxid")
+
+        // 用calss类名来获取dom元素     获取到的是dom对象集合   ie8以下不支持
+        // var box = document.getElementsByClassName("box")
+
+        // 用标签名获取dom元素          获取到的是dom对象集合
+        // var box = document.getElementsByTagName("div")
+
+        // 用name名来获取dom元素        获取到的是dom对象集合
+        // var box = document.getElementsByName("aa")
+
+
+
+        // 以下是h5新增获取dom元素方法
+
+
+        // 获取单个dom元素      css选择器怎么写这里就怎么写
+        // var box = document.querySelector("#boxid div")
+
+        // var box = document.querySelector(".box")
+
+        // 获取到多个dom元素对象集合     css选择器怎么写这里就怎么写
+        // var box = document.querySelectorAll(".box")
+
+        // var box = document.querySelectorAll("div")
+
+        // console.log(box)
+        // for (var i = 0; i < box.length; i++) {
+        //     console.log(box[i])
+        // }
+    </script>
+</body>
+
+</html>

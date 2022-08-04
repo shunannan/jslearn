@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="p">
+        <span>我是文字</span>
+        <span>我是文字</span>
+    </p>
+
+    <p id="b">
+        <span>我是文字</span>
+        <span>我是文字</span>
+    </p>
+
+    <button id="btn">按钮</button>
+
+    <script>
+        var p = document.getElementById("p")
+        var b = document.getElementById("b")
+        var btn = document.getElementById("btn")
+        btn.onclick = function () {
+
+            // innerHTML    可获取p标签内所有内容   (换行，空格，标签，文本)
+            // console.log(p.innerHTML)
+
+            // innerText    只能获取p标签内的文本内容
+            // console.log(p.innerText)
+
+            // textContent  可获取p标签内的文本和空格和换行元素
+            // console.log(p.textContent)
+
+
+            // 以下两种方法不兼容火狐浏览器
+
+            // outerHTML    可获取p标签自身和p标签内所有内容   (换行，空格，标签，文本)
+            // console.log(p.outerHTML)
+
+            // outerText 只能获取p标签内的文本内容
+            // console.log(p.outerText)
+
+
+
+            // console.log(p.innerHTML)
+            // // 替换掉p标签内的所有元素
+            // p.innerHTML = "<a href='https://www.baidu.com'>百度</a>"
+            // // 替换之后现实的效果       <a href='https://www.baidu.com'>百度</a>
+            // console.log(p.innerHTML)
+
+            // console.log("------------------------------------")
+
+            // console.log(b.outerHTML)
+            // // 只替换掉页面展示效果
+            // b.outerHTML = "<a href='https://www.baidu.com'>百度</a>"
+            // // 替换之后dom内容不变      页面p标签以及内部所有内容变成   <a href='https://www.baidu.com'>百度</a>
+            // console.log(b.outerHTML)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">切换</button>
+    <div id="box1">你好</div>
+    <div id="box2"></div>
+    <!-- <img src="./img/1.jpg" id="img">
+    <button id="pre">上一张</button>
+    <button id="next">下一张</button>
+    <p>第几张图片</p> -->
+
+
+    <!-- <button id="btn">按钮</button>  -->
+
+
+    <script>
+
+
+
+
+        /*
+            DOM:document object model   文档对象模型
+
+            回调函数：未调用但是依然会执行的函数
+        */
+
+        // 文档结构对象
+        // console.log(document)
+
+
+        // getElementById       用id获取dom元素
+        // var btn = document.getElementById("btn")
+
+
+        // 输出对象结构
+        // console.dir(btn)
+
+        // 给btn绑定一个点击事件
+        // btn.onclick = function () {
+        //     alert("111")
+        // }
+
+        // function fun() {
+        //     console.log(111)
+        // }
+
+        // btn.onclick = function () {
+        //     fun()
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var btn = document.getElementById("btn")
+        btn.onclick = function(){
+            var box1 = document.getElementById("box1")
+            var box2 = document.getElementById("box2")
+            if(box1.innerText){
+                box2.innerText = box1.innerText
+                box1.innerText = ""
+            }else{
+                box1.innerText = box2.innerText
+                box2.innerText = ""
+            }
+        }
+
+
+
+
+        // var next = document.getElementById("next")
+        // var img = document.getElementById("img")
+        // var imgArr = ["./img/1.jpg", "./img/2.jpg", "./img/3.jpg", "./img/4.jpg", "./img/5.jpg"]
+        // var index = 0
+        // var p = document.getElementsByTagName("p")[0]
+
+        // p.innerHTML = "第" + (index + 1) + "张图片"
+        // console.log(p)
+        // next.onclick = function () {
+        //     index++
+        //     if (index == imgArr.length) {
+        //         index = 0
+        //     }
+        //     img.src = imgArr[index]
+        //     p.innerHTML = "第" + (index + 1) + "张图片"
+        // }
+        // var pre = document.getElementById("pre")
+        // pre.onclick = function () {
+        //     index--
+        //     if (index < 0) {
+        //         index = imgArr.length - 1
+        //     }
+        //     img.src = imgArr[index]
+        //     p.innerHTML = "第" + (index + 1) + "张图片"
+        // }
+
+
+
+
+    </script>
+</body>
+
+</html>

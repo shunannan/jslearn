@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="./img/1.jpg" title="我是图片" id="img">
+
+    <button id="btn">按钮</button>
+
+    <script>
+        var img = document.getElementById("img")
+
+        var btn = document.getElementById("btn")
+
+        btn.onclick = function(){
+            // 获取src属性
+            // console.dir(img.src)
+
+            // 获取title属性
+            // console.log(img.title)
+
+            img.src = "./img/2.jpg"
+            img.title = "图片"
+        }
+        
+
+
+    </script>
+</body>
+</html>
