@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" title="我是标题">
+        <!-- 注释 -->
+        我是一个div
+    </div>
+
+    <!-- <input type="text" value="你好" id="inp"> -->
+
+    <script>
+        var box = document.querySelector("#box")
+        // 获取元素节点类型
+        // console.log(box.nodeType)   //元素节点   1
+        // console.log(box.nodeName)   //节点名称   DIV
+        // console.log(box.nodeValue)  //节点值     null
+
+        // var text = box.firstChild
+        // console.log(text.nodeType)  // 节点类型 3
+        // console.log(text.nodeName)  // 节点名称 #text
+        // console.log(text.nodeValue) // 节点值   文本内容
+
+        // console.log(text.nodeType)  // 节点类型 8
+        // console.log(text.nodeName)  // 节点名称 #comment
+        // console.log(text.nodeValue) // 节点值   注释内容
+
+        // 获取某个元素的属性节点
+        // var aa = box.getAttributeNode("title")
+        // console.log(aa.nodeType)    // 节点类型2
+        // console.log(aa.nodeName)    // 节点名称   属性名
+        // console.log(aa.nodeValue)   // 节点值   属性赋的值
+    </script>
+</body>
+
+</html>

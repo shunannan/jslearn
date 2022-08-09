@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <!-- 奥拓 -->
+        <li>宝马
+            <a href="">超链接</a>
+        </li>
+        <li>奔驰</li>
+        <li>奥迪</li>
+        <li>宝马
+            <a href="">超链接</a>
+        </li>
+    </ul>
+
+
+
+    <button id="btn">按钮</button>
+
+    <script>
+        // var bmw = document.getElementsByTagName("li")
+        var ul = document.querySelector("ul")
+
+        var li = document.querySelectorAll("li")[0]
+
+        var li1 = document.getElementsByTagName("li")[3]
+
+        var s = li1.childNodes[2]
+
+        // console.log(s)
+
+        var a = document.getElementsByTagName("a")[0]
+
+        var btn = document.getElementById("btn")
+
+        btn.onclick = function () {
+            // 获取当前元素的子元素节点     不包括（空格，注释，换行）
+            // console.log(bmw.children)
+            // 获取当前元素的子元素节点     包括（空格，注释，换行）
+            // console.log(bmw.childNodes)
+
+            // 获取到当前元素的第一个子元素节点 包括（空格，注释，换行）
+            // console.log(bmw.firstChild)
+
+            // 获取当前元素的第一个子元素（标签）节点
+            // console.log(bmw.firstElementChild)
+
+            // 获取到当前元素的最后一个子元素节点 包括（空格，注释，换行）
+            // console.log(bmw.lastChild)
+
+            // 获取当前元素的最后一个子元素（标签）节点
+            // console.log(bmw.lastElementChild)
+
+            // 获取当前元素的后一个兄弟元素     包括（空格，注释，换行）
+            // console.log(li.nextSibling)
+
+            // 获取到当前元素的后一个兄弟元素（标签）
+            // console.log(li.nextElementSibling)
+
+            // 获取当前元素的前一个兄弟元素     包括（空格，注释，换行）
+            // console.log(li.previousSibling)
+
+            // 获取到当前元素的前一个兄弟元素（标签）
+            // console.log(li.previousElementSibling)
+
+            // 这个用的比较多   获取到当前元素的父元素内所有元素
+            // console.log(li.parentNode)
+
+            // 这个不支持火狐浏览器   获取到当前元素的父元素内所有元素
+            // console.log(li.parentElement)
+
+            // 查看当前元素内有几个子元素
+            // console.log(ul.childElementCount)
+
+            // 查看当前元素内有没有子节点   包括（空格，注释，换行）
+            // console.log(li.hasChildNodes())
+
+            // 查看某个元素内有没有某个节点     包括（空格，注释，换行）
+            // console.log(ul.contains(s))
+
+            // 判断两个dom元素是否相等  所有节点都要相等
+            // console.log(li[0].isEqualNode(li[3]))
+
+            // 判断两个dom元素是否是同一个dom元素
+            // console.log(li.isSameNode(li1))
+
+            // 获取文档结构对象
+            // console.log(document)
+
+            // 获取到body
+            // console.log(document.body)
+
+            // 获取到head头部
+            // console.log(document.head)
+
+            // 获取到html
+            // console.log(document.documentElement)
+
+            // 获取到标题
+            // console.log(document.title)
+
+        }
+    </script>
+</body>
+
+</html>
