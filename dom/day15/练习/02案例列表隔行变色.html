@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>$永远的24k纯帅$</title>
+</head>
+
+<body>
+    <input type="button" value="隔行变色" id="btn" />
+    <ul id="uu">
+        <li>红旗</li>
+        <li>五菱宏光</li>
+        <li>奔驰</li>
+        <li>兰博基尼</li>
+        <li>哈弗</li>
+        <li>奥拓</li>
+        <li>奥迪</li>
+        <li>悍马</li>
+    </ul>
+    <script>
+        var li = document.querySelectorAll("li");
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            for(var i = 0; i < li.length; i++){
+                var a = Math.ceil(Math.random()*255);
+                var b = Math.ceil(Math.random()*255);
+                var c = Math.ceil(Math.random()*255);
+                var d = "rgb("+ a + "," + b + "," + c +")";
+                li[i].style.backgroundColor = d;
+            }
+        };
+    </script>
+
+</body>
+
+</html>

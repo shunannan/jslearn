@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        flex-shrink:定义收缩比例，通过设置的值来计算收缩空间
+            比例值计算 ：当前空间的flex-shrink/所有兄弟元素的flex-shrink的和
+            默认值为1
+
+            父级容器不够大的时候哪个元素的flex-shrink的值最大在他就缩小的最快最多
+        */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 500px;
+            height: 600px;
+            border: 1px solid red;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /* flex-shrink: 2; */
+            flex-shrink: 1;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* flex-shrink: 1; */
+            flex-shrink: 0;
+        }
+
+        .third {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* flex-shrink: 1; */
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+    </div>
+</body>
+
+</html>

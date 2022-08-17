@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            定义子元素在侧轴(垂直)的对齐方式
+            align-items:设置子元素(伸缩项)在   侧轴方向上的对齐方式
+                center:设置在侧轴方向上居中对齐
+                flex-start:设置在侧轴方向上顶对齐
+                flex:end:设置在侧轴方向上底对齐
+        */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .first {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .third {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .box {
+            width: 1000px;
+            height: 600px;
+            background-color: yellow;
+            display: flex;
+
+            /* 定义子元素顶部对齐 */
+            /* align-items: flex-start; */
+            /* 定义子元素低部对齐 */
+            /* align-items: flex-end; */
+            /* 定义子元素垂直居中 */
+            /* align-items: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+    </div>
+</body>
+
+</html>

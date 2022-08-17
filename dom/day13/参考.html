@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table id="tab"></table>
+
+    <input type="text" id="content1">
+    <input type="text" id="content2">
+    <input type="text" id="content3">
+
+    <button id="btn">提交</button>
+
+    <script>
+        var btn = document.querySelector("#btn")
+
+        var inp1 = document.querySelector("#content1")
+        var inp2 = document.querySelector("#content2")
+        var inp3 = document.querySelector("#content3")
+
+        var tab = document.querySelector("#tab")
+
+        btn.onclick = function () {
+            var tr = document.createElement("tr")
+
+            var td1 = document.createElement("td")
+            var td2 = document.createElement("td")
+            var td3 = document.createElement("td")
+
+            var wb1 = document.createTextNode(inp1.value)
+            var wb2 = document.createTextNode(inp2.value)
+            var wb3 = document.createTextNode(inp3.value)
+
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+
+            td1.appendChild(wb1)
+            td2.appendChild(wb2)
+            td3.appendChild(wb3)
+
+            tab.appendChild(tr)
+
+            console.log(tr)
+
+            inp1.value = ""
+            inp2.value = ""
+            inp3.value = ""
+        }
+    </script>
+</body>
+
+</html>

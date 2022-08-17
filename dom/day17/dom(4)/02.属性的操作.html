@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="a a" type="text"  checked placeholder="请输入" name="张三" data-a="1001" data-index="1">
+    <!-- <input type="text" > -->
+
+    <script>
+        var inp = document.querySelector("input")
+
+        // console.log(inp.type)
+        // console.log(inp.value)
+        // console.log(inp.checked);
+        // console.log(inp.placeholder);
+        // console.log(inp.name);
+        // 获取dom元素的全部自定义属性  对象
+        // console.log(inp.dataset);
+
+        console.log(inp.class)
+
+        // 获取dom元素的属性值  可获取自定义属性的值    字符串
+        // console.log(inp.getAttribute("value"));
+        // console.log(inp.getAttribute("type"));
+        // console.log(inp.getAttribute("data-a"));
+        // console.log(inp.getAttribute("class"));
+
+        // 给dom元素添加属性并且赋值
+        // inp.setAttribute("data-b","123")
+        // console.log(inp.dataset)
+
+        // 删除dom元素内指定属性
+        // inp.removeAttribute("data-a")
+        // console.log(inp.dataset)
+
+        // 获取dom元素的属性节点
+        // console.log(inp.getAttributeNode("type").nodeType)
+    </script>
+</body>
+
+</html>

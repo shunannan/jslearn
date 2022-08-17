@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div style="background-color: #ccc;">文字</div>
+  <button>按钮</button>
+  <script>
+    var btn = document.querySelector("button")
+    var box = document.querySelector("div")
+    btn.onclick = function () {
+      // css(box,{
+      //   backgroundColor:'red',
+      //   width:500,
+      //   height:300,
+      //   opacity:0.5
+      // })
+      // box.style.width = "500px"
+      // box.style.height = "500px"
+      // box.style.backgroundColor = "red"
+      /* 
+        dom.style.样式名
+          只能获取行内样式
+      */
+      // console.log(box.style.backgroundColor)
+      // console.log(box.style.width)
+      // console.log(box.style.height)
+
+      // 设置样式
+      // box.style.backgroundColor = "red"
+      // box.style.width = "500px"
+
+      /* 
+        读取样式
+         window.getComputedStyle(dom)
+         不支持ie 其它浏览器可以用
+      */
+      //  该方法不支持ie8及以下
+      // console.log(window.getComputedStyle(box).backgroundColor)
+
+
+      /* 
+        读取样式  
+          只能在ie里面用
+      */
+      // console.log(box.currentStyle.backgroundColor)
+      // var sty = ''
+      // if (window.getComputedStyle) {
+      //   // 函数体 其它浏览器
+      //   sty = window.getComputedStyle(box).backgroundColor
+      // } else {
+      //   //undefined ie8及以下
+      //   sty = box.currentStyle.backgroundColor
+      // }
+      // console.log(sty)
+
+      // var styleValue = getStyle(box, "backgroundColor")
+      // console.log(styleValue)
+
+
+    }
+
+    // 封装函数
+    function getStyle(el, styleName) {
+      var styValue;
+      if (window.getComputedStyle) {
+        // 函数体 其它浏览器
+        styValue = window.getComputedStyle(el)[styleName]
+      } else {
+        //undefined ie8及以下
+        styValue = el.currentStyle[styleName]
+      }
+      return styValue
+    }
+    /* 
+      封装函数：
+        css() 可以读取样式  可以设置样式
+        css(box,color)
+        css(box,{
+          color:'red',
+          fontSize:'50px'
+        })
+    */
+    // function css(el,style){
+    //   if(typeof style === 'string') return getStyle(el,style)
+    //   var noPxArr = ['opacity','zIndex']
+    //   for(var key in style){
+    //     el.style[key] = typeof style[key] === "number" && noPxArr.indexOf(key) === -1 ? style[key] + "px" : style[key]
+
+    //   }
+    // }
+
+
+    // function css(el,style) { 
+    //   var noPxArr = ['opacity','zIndex']
+    //   if(typeof style === "object"){
+    //     // 设置样式
+    //     for(var key in style){
+    //       if(typeof style[key] === "number"){
+    //         if(noPxArr.indexOf(key) !== -1){
+    //           el.style[key] = style[key]
+    //         }else{
+    //           el.style[key] = style[key]+"px"
+    //         }
+    //       }else{
+    //         el.style[key] = style[key]
+    //       }
+    //     }
+    //   }else{
+    //     //获取样式
+    //     return getStyle(el,style)
+    //   }
+    // }
+
+    function css(dom, sty) {
+      var noPxArr = ["opacity", "zIndex"]
+      if (typeof sty === "object") {
+        for (var key in sty) {
+          if (typeof sty[key] === "number") {
+            if (noPxArr.indexOf(key) !== -1) {
+              dom.style[key] = sty[key]
+            } else {
+              dom.style[key] = sty[key] + "px"
+            }
+          } else {
+            dom.style[key] = sty[key]
+          }
+        }
+      } else {
+        return getStyle(dom, sty)
+      }
+    }
+
+
+
+    // console.log(css(box,"backgroundColor"))
+    css(box, {
+      fontSize: '30px',
+      width: "300px"
+    })
+  </script>
+  <script src="./tools.js"></script>
+</body>
+
+</html>

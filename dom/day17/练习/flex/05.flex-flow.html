@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*flex-flow:是flex-wrap和flex-direction的综合*/
+        /* flex-flow: row-reverse wrap; */
+        /* display: flex;
+            flex-wrap: wrap;
+            flex-direction: column; */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .first {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .third {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .fourth {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .fifth {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .box {
+            width: 900px;
+            height: 600px;
+            border: 1px solid red;
+            margin: 0 auto;
+
+            display: flex;
+            /* flex-direction: column-reverse;
+            flex-wrap: wrap-reverse; */
+            flex-flow: wrap-reverse column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+        <div class="fifth">5</div>
+    </div>
+</body>
+
+</html>

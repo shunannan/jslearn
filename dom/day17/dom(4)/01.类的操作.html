@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box a"></div>
+
+    <script>
+        var box = document.querySelector("div")
+
+        // 获取dom元素的类名    字符串
+        // console.log(box.className)
+
+        // 给dom元素添加类名
+        box.className += " b"
+
+        // 获取dom元素类名集合
+        // console.log(box.classList)
+
+        // 给dom元素添加类名
+        // box.classList.add("b","c")
+
+        // 删除dom元素中指定类名
+        // box.classList.remove("a")
+
+        // 判断dom元素中有没有该类名    返回布尔值
+        // console.log(box.classList.contains("box", "a"));
+
+        // 判断dom元素中有没有指定类名有的话就把他删掉没有就添加上去
+        // box.classList.toggle("b")
+    </script>
+</body>
+
+</html>

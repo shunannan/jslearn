@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+    }
+
+    .a {
+      background-color: red;
+      color: #fff;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box a b c">我是box</div>
+  <button class="add">添加</button>
+  <button class="del">删除</button>
+  <button class="con">判断类</button>
+  <button class="toggle">切换类</button>
+  <script src="./tools.js"></script>
+  <script>
+    //点击添加按钮
+    var add = document.querySelector(".add")
+    var del = document.querySelector(".del")
+    var con = document.querySelector(".con")
+    var toggle = document.querySelector(".toggle")
+    var box = document.querySelector(".box")
+    add.onclick = function () {
+      // addClass(box, "abc")
+      //获取类名
+      // console.log(box.className)
+      // 设置类名
+      // box.className += " a"
+      box.style.background = "red"
+      box.style.fontSize="20px"
+      box.style.textAlign = "center"
+      box.style.lineHeight = "200px"
+      box.style.color = "#fff"
+
+      // css(box,{
+      //   backgroundColor:'red',
+      //   fontSize:24,
+      //   textAlign:'center',
+      //   lineHeight:'200px',
+      //   color:'#fff'
+      // })
+
+    }
+
+    // del.onclick = function () {
+    //   var cname = box.className
+    //   var cArr = cname.split(" ")
+    //   var index = cArr.indexOf("a")
+    //   if (cArr.includes("a")) {
+    //     cArr.splice(index, 1)
+    //   }
+    //   console.log(box.className = cArr.join(" "))
+    //   // removeClass(box, "box")
+    // }
+
+    // con.onclick = function () {
+    //   var cname = box.className
+    //   var cArr = cname.split(" ")
+    //   console.log(cArr.includes("a12312"))
+    //   // console.log(hasClass(box, "a123"))
+    // }
+
+
+    // toggle.onclick = function () {
+    //   toggleClass(box, "box")
+    // }
+
+    /* 
+      功能：用来判断某个元素中是否有指定的类名
+        参数:1.需要判断的dom元素
+             2.类名
+    */
+    // function hasClass(el, className) {
+    //   var cnames = el.className
+    //   var cArr = cnames.split(" ")
+    //   return cArr.includes(className)
+    // }
+
+
+    /* 
+      功能：添加类名
+        参数：1.需要添加的dom元素
+              2.需要添加的类名
+    */
+    // function addClass(el, className) {
+    //   if (hasClass(el, className)) return
+    //   el.className += " " + className
+    // }
+
+    /* 
+      功能:删除类名
+        参数：1.需要删除的dom元素
+              2.需要删除的类名
+    */
+    // function removeClass(el, className) {
+    //   var cname = el.className
+    //   var cArr = cname.split(" ")
+    //   var index = cArr.indexOf(className)
+    //   if (index === -1) return
+    //   cArr.splice(index, 1)
+    //   box.className = cArr.join(" ")
+    // }
+     /* 
+      功能:切换类名
+        参数：1.需要切换的dom元素
+              2.需要切换的类名
+    */
+    // function toggleClass(el, className) {
+    //   hasClass(el, className) ? removeClass(el, className) : addClass(el, className)
+    // }
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

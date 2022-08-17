@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+        }
+
+        header a {
+            flex: 1;
+        }
+
+        header a img {
+            width: 100%;
+            display: block;
+        }
+
+        main {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        main .item {
+            height: 100px;
+            display: flex;
+            background: #57c3ae;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        main>.item:nth-of-type(2) {
+            background-color: #33aa46;
+        }
+
+        main>.item:nth-of-type(3) {
+            background-color: #aa4b40;
+        }
+
+        main>.item:nth-of-type(4) {
+            background-color: #445faa;
+        }
+
+        main .item .left {
+            flex: 1;
+        }
+
+        main .item .right {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main .item .right a {
+            box-sizing: border-box;
+            width: 50%;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+        main .item .right a:nth-of-type(3),
+        main .item .right a:nth-of-type(4) {
+            border-bottom: none;
+        }
+
+        main .extra {
+            display: flex;
+        }
+
+        main .extra a {
+            flex: 1;
+        }
+
+        main .extra a img {
+            width: 100%;
+        }
+
+        footer nav {
+            display: flex;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-size: 13px;
+
+        }
+
+        footer nav a {
+            flex: 1;
+            line-height: 30px;
+            text-decoration: none;
+            color: #888;
+            text-align: center;
+        }
+
+        .link {
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .copyRight {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#">
+                <img src="./img/banner.jpg" alt="">
+            </a>
+        </header>
+
+        <main>
+            <section class="item">
+                <div class="left"></div>
+                <div class="right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特惠酒店</a>
+                    <a href="">客栈公寓</a>
+                </div>
+            </section>
+            <section class="item">
+                <div class="left"></div>
+                <div class="right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特惠酒店</a>
+                    <a href="">客栈公寓</a>
+                </div>
+            </section>
+            <section class="item">
+                <div class="left"></div>
+                <div class="right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特惠酒店</a>
+                    <a href="">客栈公寓</a>
+                </div>
+            </section>
+            <section class="item">
+                <div class="left"></div>
+                <div class="right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特惠酒店</a>
+                    <a href="">客栈公寓</a>
+                </div>
+            </section>
+            <section class="extra">
+                <a href="#">
+                    <img src="img/extra_1.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/extra_2.png" alt="">
+                </a>
+            </section>
+        </main>
+
+
+        <footer>
+            <nav>
+                <a href="">电话预订</a>
+                <a href="">下载客户端</a>
+                <a href="">我的订单</a>
+            </nav>
+            <p class="link">
+                <a href="">网站地图</a>
+                <a href="">ENGLISH</a>
+                <a href="">电脑版</a>
+            </p>
+            <p class="copyRight">&copy;2015 携程旅行</p>
+        </footer>
+    </div>
+</body>
+
+</html>

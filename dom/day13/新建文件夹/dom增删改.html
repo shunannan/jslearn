@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li class="zs">张三
+            <ul>
+                <li class="xiao">小张三</li>
+            </ul>
+        </li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+        <li>田七</li>
+    </ul>
+
+    <button id="btn1">在ul内部最下面添加一个王五</button>
+    <button id="btn2">在张三前面添加一个王五</button>
+    <button id="btn3">删除指定元素</button>
+    <button id="btn4">将赵六换成老六</button>
+    <button id="btn5">按钮</button>
+
+    <script>
+        var btn1 = document.querySelector("#btn1")
+
+        // 在ul内部最下面添加一个王五
+        var ul = document.querySelector("ul")
+
+        btn1.onclick = function () {
+            // 创建一个元素(标签)节点
+            var li = document.createElement("li")
+            // 创建一个文本节点
+            var ww = document.createTextNode("王五")
+            // li里面添加一个子元素ww
+            li.appendChild(ww)
+            // ul里面添加一个子元素li
+            ul.appendChild(li)
+        }
+
+        // 在张三前面添加一个王五
+        var btn2 = document.querySelector("#btn2")
+
+        btn2.onclick = function () {
+            // 创建一个元素(标签)节点
+            var li = document.createElement("li")
+            // 创建一个文本节点
+            var ww = document.createTextNode("王五")
+            // li里面添加一个子元素ww
+            li.appendChild(ww)
+            // 获取到ul的第一个子元素
+            var zs = ul.firstElementChild
+            // 在ul里面的zs前面添加li
+            ul.insertBefore(li, zs)
+
+            console.log(zs)
+        }
+
+        // 删除指定元素
+        var btn3 = document.querySelector("#btn3")
+
+        btn3.onclick = function () {
+            // 获取ul里面的第三个li
+            var ww = ul.querySelector("li:nth-of-type(3)")
+            // 同上 用的下标的方式
+            // var li = document.querySelectorAll("li")[2]
+            // 删除ul里面的指定子元素
+            // ul.removeChild(ww)
+            // 删掉指定元素
+            li.remove()
+            // console.log(ww)
+        }
+
+        // 将赵六换成老六
+        var btn4 = document.querySelector("#btn4")
+
+        btn4.onclick = function () {
+
+            var li = document.createElement("li")
+
+            var ll = document.createTextNode("老六")
+
+            var zl = ul.querySelector("li:nth-of-type(4)")
+
+            li.appendChild(ll)
+            // 将ul里面的zl替换成li
+            ul.replaceChild(li,zl)
+
+            console.log(li)
+        }
+
+        var btn5 = document.querySelector("#btn5")
+
+        btn5.onclick = function () {
+            var zs = document.querySelector("li")
+            // 不写true浅拷贝：只获取当前元素的标签和属性
+            // 写true深拷贝：获取当前元素以及内部所有元素
+            var xzs = zs.cloneNode(true)
+            ul.appendChild(xzs)
+            console.log(xzs)
+        }
+
+        
+
+
+    </script>
+</body>
+
+</html>

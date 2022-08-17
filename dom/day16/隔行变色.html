@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="隔行变色" id="btn" />
+    <ul id="uu">
+        <li>红旗</li>
+        <li>五菱宏光</li>
+        <li>奔驰</li>
+        <li>兰博基尼</li>
+        <li>哈弗</li>
+        <li>奥拓</li>
+        <li>奥迪</li>
+        <li>悍马</li>
+    </ul>
+
+    <script>
+        var li = document.querySelectorAll("li")
+
+        var btn = document.querySelector("input")
+
+        btn.onclick = function () {
+            for (var i = 0; i < li.length; i++) {
+                var s1 = Math.floor(Math.random() * 256)
+                var s2 = Math.floor(Math.random() * 256)
+                var s3 = Math.floor(Math.random() * 256)
+                var rgb = "rgb(" + s1 + "," + s2 + "," + s3 + ")"
+                li[i].style.backgroundColor = rgb
+            }
+        }
+
+    </script>
+</body>
+
+</html>

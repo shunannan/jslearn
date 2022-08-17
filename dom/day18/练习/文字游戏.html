@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .container {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 0 3px gray;
+        }
+
+        .top {
+            height: 30px;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        .top #time {
+            float: left;
+            margin-left: 5px;
+        }
+
+        .top #score {
+            float: right;
+            margin-right: 5px;
+        }
+
+        #showWord {
+            text-align: center;
+            line-height: 100px;
+            font-size: 150px;
+            margin-top: 50px;
+            ;
+        }
+
+        .rule {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        ul {
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li {
+            width: 400px;
+            height: 300px;
+            line-height: 250px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="top">
+            <span id="time"> 剩余时间:20 </span>
+            <span id="score"> 得分:0 </span>
+        </p>
+        <p id="showWord">黑</p>
+        <p class="rule">根据上面字的颜色,在下面选择正确的字</p>
+        <ul>
+            <li>黑</li>
+            <li>黄</li>
+            <li>红</li>
+            <li>绿</li>
+            <li>蓝</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var colorArr = ["black", "yellow", "red", "green", "blue"];
+
+    var liList = document.querySelectorAll("li");
+    var showWord = document.querySelector("#showWord");
+    var time = document.querySelector("#time");
+    var score = document.querySelector("#score");
+    var rdom = Math.floor(Math.random() * 5);
+    showWord.style.color = colorArr[rdom]
+
+    var s = 20;
+    var interval, grade = 0;
+
+
+    for (var i = 0; i < liList.length; i++) {
+        liList[i].setAttribute("data-color", colorArr[i])
+
+        rdom = Math.floor(Math.random() * 5);
+        liList[i].style.color = colorArr[rdom];
+
+        liList[i].onclick = function () {
+
+            if (showWord.style.color == this.getAttribute("data-color")) {
+                clearInterval(interval)
+                interval = setInterval(function () {
+                    if (s > 0) {
+                        s--
+                        time.innerHTML = "剩余时间:" + s;
+                    } else {
+                        alert("时间到，游戏结束")
+                        clearInterval(interval)
+                    }
+
+
+                }, 1000)
+                grade++;
+                score.innerHTML = '得分:'+grade;
+                console.log(grade);
+                rdom = Math.floor(Math.random() * 5);
+                showWord.style.color = colorArr[rdom]
+                for (var j = 0; j < liList.length; j++) {
+                    rdom = Math.floor(Math.random() * 5);
+                    liList[j].style.color = colorArr[rdom];
+                }
+                
+            } else {
+                s = 0;
+                alert("选择错误，游戏结束,\n 您的得分为："+grade)
+                time.innerHTML = "剩余时间:" + s;
+                clearInterval(interval)
+            }
+        }
+    }
+
+// function rdom() {
+//     var rdom = Math.floor(Math.random() * 5);
+//     showWord.style.color = colorArr[rdom]
+// }
+
+
+</script>
+
+</html>

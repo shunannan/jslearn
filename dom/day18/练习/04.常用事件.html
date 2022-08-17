@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            padding: 30px;
+        }
+
+        /* .box:hover{
+      background-color: red;
+    } */
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <div class="inner"></div>
+    </div>
+    <input type="text" id="inp">
+    <ul>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+    </ul>
+
+    <script>
+        var box = document.querySelector("div div")
+
+        var inp = document.querySelector("input")
+
+        // 按下特定的键才会执行
+        // inp.onkeydown = function (event) {
+        //     // console.log(event);
+        //     if (event.key == "Enter") {
+        //         console.log(111)
+        //     }
+        // }
+
+        // 松开特定的键才会执行
+        // inp.onkeyup = function (event) {
+        //     // console.log(event);
+        //     if (event.key == "Enter") {
+        //         console.log(111)
+        //     }
+        // }
+
+        // 表单发生变化才会执行
+        // inp.onchange = function () {
+        //     console.log(inp.value)
+        // }
+
+        // 表单获取到焦点才会执行
+        // inp.onfocus = function () {
+        //     console.log("获取")
+        // }
+
+        // 表单失去到焦点才会执行
+        // inp.onblur = function () {
+        //     console.log("失去")
+        // }
+
+        // 只要输入内容就会执行
+        // inp.oninput = function(){
+        //     console.log(inp.value)
+        // }
+
+        // 鼠标在某个元素内部只要移动机会执行
+        // box.onmousemove = function () {
+        //     console.log(111)
+        // }
+
+        // 点击并且抬起才会执行
+        // box.onclick = function(){
+        //     console.log("按下并抬起了")
+        // }
+
+        // 鼠标左键按下立马执行
+        // box.onmousedown = function(){
+        //     console.log("按下了")
+        // }
+
+        // 鼠标左键抬起才会执行
+        // box.onmouseup = function(){
+        //     console.log("抬起了")
+        // }
+
+        // 鼠标移入事件
+        // 鼠标移入到父级会执行一次 移入到子级也会重复执行
+        // box.onmouseover = function () {
+        //     console.log("进来了")
+        // }
+
+        // 鼠标移出事件
+        // 鼠标移入到父级会执行一次 移入到子级也会重复执行
+        // box.onmouseout = function(){
+        //     console.log("离开了")
+        // }
+
+        // 鼠标移入事件
+        // 经过子元素不会重复触发
+        // box.onmouseenter = function(){
+        //     console.log("移入了")
+        // }
+
+        // 鼠标移出事件
+        // 经过子元素不会重复触发
+        // box.onmouseleave = function(){
+        //     console.log("移出了")
+        // }
+    </script>
+</body>
+
+</html>

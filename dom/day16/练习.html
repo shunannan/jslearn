@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    宽度:<input type="text" id="width" /> <br /><br />
+    高度:<input type="text" id="height" /><br /><br />
+    背景颜色:<input type="text" id="bck" /><br /><br />
+    字体颜色:<input type="text" id="fc" /><br /><br />
+    水平偏移:<input type="text" id="left" /><br /><br />
+    垂直偏移:<input type="text" id="top" /><br /><br />
+    <button>设置</button><br /><br />
+    <div id="box">我是文字</div>
+
+    <script>
+        var btn = document.querySelector("button")
+        var box = document.querySelector("div")
+
+
+
+        btn.onclick = function () {
+            var width = document.querySelector("#width").value
+            var height = document.querySelector("#height").value
+            var bck = document.querySelector("#bck").value
+            var fc = document.querySelector("#fc").value
+            var left = document.querySelector("#left").value
+            var top = document.querySelector("#top").value
+
+            box.style.width = width + "px"
+            box.style.height = height + "px"
+            box.style.backgroundColor = bck
+            box.style.color = fc
+            box.style.marginLeft = left + "px"
+            box.style.marginTop = top + "px"
+        }
+
+
+    </script>
+</body>
+
+</html>

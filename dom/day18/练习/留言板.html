@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+
+        }
+
+        header {
+            padding: 30px;
+            background-color: lightgrey;
+        }
+
+        input {
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            width: 92%;
+            height: 36px;
+            line-height: 36px;
+            display: block;
+            margin-left: 4%;
+
+        }
+
+        header>div {
+            width: 80%;
+            height: 36px;
+            background-color: #efefef;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+
+        #submit {
+            width: 40%;
+            margin-top: 40px;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        #submit:hover,
+        li p .del:hover {
+            cursor: pointer;
+        }
+
+        ul {
+            margin-top: 40px;
+
+        }
+
+        li {
+            height: 60px;
+            margin: 10px;
+        }
+
+        li p {
+            height: 30px;
+
+        }
+
+        li p .nick,
+        li p .message {
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 10px;
+        }
+
+        li p .time,
+        li p .del {
+            float: right;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+
+        .up {
+            background-color: lightblue;
+        }
+
+        .down {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <input type="text" id="nick" placeholder="请输入昵称">
+            </div>
+            <div style="margin-top: 40px;">
+                <input type="text" id="message" placeholder="请输入留言">
+            </div>
+            <div id="submit">提交</div>
+        </header>
+        <ul>
+            <li>
+                <p class="up">
+                    <span class="nick">leo</span>
+                    <span class="time">15:25:00</span>
+                </p>
+                <p class="down">
+                    <span class="message">hello</span>
+                    <span class="del">删除</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var sub = document.querySelector("#submit");
+        var ul = document.querySelector("ul");
+        var uname = document.querySelector("#nick");
+        var message = document.querySelector("#message");
+        var nickname, msg, date, sj, h, m, s, li, up, down, nick, time, msgSpan, del
+        sub.onclick = function () {
+            //获取昵称、留言内容
+            nickname = document.createTextNode(uname.value);
+            msg = document.createTextNode(message.value);
+            if (uname.value == "" || message.value == "") {
+                alert("请输入内容")
+            } else {
+                //获取时间
+                date = new Date();
+                h = date.getHours();
+                m = date.getMinutes();
+                s = date.getSeconds()+"";
+                if(s.length == 1) {
+                    sj = h + ":" + m + ":0" + s;
+                }else{
+                    sj = h + ":" + m + ":" + s;
+                }
+                
+
+                //创建节点标签
+                li = document.createElement("li");
+                up = document.createElement("p");
+                down = document.createElement("p");
+                nick = document.createElement("span");
+                time = document.createElement("span");
+                msgSpan = document.createElement("span");
+                del = document.createElement("span");
+
+                //给节点添加类名
+                nick.className = "nick";
+                time.className = "time";
+                msgSpan.className = "message";
+                down.className = "down";
+                del.className = "del";
+                up.className = "up";
+
+                //往节点内插入内容
+                nick.appendChild(nickname);
+                time.innerText = sj;
+                msgSpan.appendChild(msg);
+                del.innerText = "删除"
+
+                up.appendChild(nick)
+                up.appendChild(time)
+                down.appendChild(msgSpan)
+                down.appendChild(del)
+                li.appendChild(up)
+                li.appendChild(down)
+                ul.appendChild(li)
+
+
+                var delate = document.querySelectorAll(".del");
+                console.log(delate);
+                for (var i = 0; i < delate.length; i++) {
+                    delate[i].onclick = function () {
+                        console.log(111);
+                        this.parentNode.parentNode.remove();
+                    }
+                }
+            }
+
+        }
+        var delate = document.querySelectorAll(".del");
+        for (var i = 0; i < delate.length; i++) {
+            delate[i].onclick = function () {
+                this.parentNode.parentNode.remove();
+            }
+        }
+    </script>
+</body>
+
+</html>
