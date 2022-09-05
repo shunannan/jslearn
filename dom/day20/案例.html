@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 400px;
+            /* position: relative;
+            top: 1000px; */
+        }
+
+        .box1 {
+            width: 400px;
+            height: 300px;
+            border: 3px solid;
+            margin-bottom: 30px;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 100px;
+            border: 3px solid;
+            text-align: center;
+            line-height: 100px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2">
+            X = 30 Y = 50
+        </div>
+    </div>
+
+    <script>
+
+        /* 
+        在使用event的时候一定要做这件事
+            元素.事件 = function(event){
+                第一种:
+                    if(window.event){
+                        event = window.event
+                    }else{
+                        event = event
+                    }
+            第二种：
+                event = event || window.event
+    }
+
+        */
+
+        // var box1 = document.querySelector(".box1")
+
+        // var box2 = document.querySelector(".box2")
+
+        // box1.onmousemove = function (event) {
+            // var e = event
+            // e = event || window.event
+        //     box2.innerHTML = "X = " + event.clientX + "  " + "Y = " + event.clientY
+        // }
+
+    </script>
+</body>
+
+</html>

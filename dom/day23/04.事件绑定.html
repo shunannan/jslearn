@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <script>
+
+        // https://blog.csdn.net/katherin_wanzi/article/details/123502394
+
+        var btn = document.querySelector("button")
+
+        // ie8以下才支持
+        // btn.attachEvent("click",fun)
+
+        // 清除事件绑定     如果要清除事件的话得把函数提出来 用函数名来清除
+        // btn.attachEvent("onclick", fun)
+        // btn.detachEvent("onclick", fun)
+
+        // function fun() {
+        //     console.log(111)
+        // }
+
+
+        // 不兼容ie8以下
+        // 事件绑定
+        // btn.addEventListener("click", fun, false)
+
+        // 清除事件绑定     如果要清除事件的话得把函数提出来 用函数名来清除
+        // btn.removeEventListener("click", fun)
+
+
+        // console.log(window.document)
+        // 绑定点击事件
+        // btn.onclick = function () {
+        //     console.log(111)
+        // }
+        // 解除绑定事件
+        // btn.onclick = null
+
+    </script>
+</body>
+
+</html>

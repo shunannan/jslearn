@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <header class="w">
+        <span class="total">全部商品4</span>
+        <a href="javascript:;" class="addP">添加商品</a>
+        <div class="all">
+            <div class="left">
+                <label>
+                    <input type="checkbox" name="" class="allCheck" id="">
+                    全选
+                </label>
+                <span>商品</span>
+            </div>
+            <div class="right">
+                <span>单价</span>
+                <span>数量</span>
+                <span>小计</span>
+                <span>操作</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="w">
+        <!-- <div class="noData">
+            购物车为空...
+        </div> -->
+        <!-- <div class="item">
+      <div class="left">
+        <input type="checkbox" />
+        <img
+          src="https://img30.360buyimg.com/n0/s80x80_jfs/t1/212004/1/260/129963/6167866fE8a7a6787/b939c3c7742d17b7.jpg.dpg"
+          alt="">
+        <span>美的(Midea) 新能效 锐爽 大3匹 智能家电 变频冷暖 客厅圆柱空调立式柜机 智控温 以旧换新 KFR-72LW/N8MJC3</span>
+      </div>
+      <div class="right">
+        <span style="font-size: 13px;">￥1000.00</span>
+        <div>
+          <button class="changeNum">-</button>
+          <input type="text">
+          <button class="changeNum">+</button>
+        </div>
+        <span style="font-size: 13px; font-weight: bold;">￥1000.00</span>
+        <a href="">删除</a>
+      </div>
+    </div> -->
+    </main>
+    <div class="ot"></div>
+
+    <footer class="w">
+        <div class="left">
+            <label>
+                <input type="checkbox" class="allCheck" name="" id="">
+                全选
+            </label>
+            <a href="javascript:;" class="delAll">删除所有的商品</a>
+        </div>
+        <div class="right">
+            <span>总价<strong class="totalPrice">￥10.00</strong></span>
+            <button>去结算</button>
+        </div>
+    </footer>
+
+    
+
+
+    <div class="zzc">
+        <div class="main">
+            <label>
+                商品名称:
+                <input type="text" class="pName" />
+            </label>
+            <label>
+                商品单价:
+                <input type="text" class="pPrice" />
+            </label>
+            <label>
+                商品数量:
+                <input type="number" min="0" class="pCount" value="0" />
+            </label>
+            <div>
+                是否为选中商品:
+                <label>
+                    <input type="radio" value="1" name="isC" checked />是
+                </label>
+                <label>
+                    <input type="radio" value="0" name="isC" />否
+                </label>
+            </div>
+            <div class="btns">
+                <button class="submit">确定</button>
+                <button class="close">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <i class="iconback">返回</i>
+    <script src="./index.js"></script>
+</body>
+
+</html>

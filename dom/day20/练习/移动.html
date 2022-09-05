@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* position: absolute; */
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        var box = document.querySelector("div")
+
+        document.onkeydown = function (event) {
+            var key = event.keyCode
+
+            var l = box.offsetLeft
+
+            var t = box.offsetTop
+
+            switch (key) {
+                case 37:
+                    box.style.marginLeft = l - 10 + "px"
+                    break;
+                case 38:
+                    box.style.marginTop = t - 10 + "px"
+                    break;
+                case 39:
+                    box.style.marginLeft = l + 10 + "px"
+                    break;
+                case 40:
+                    box.style.marginTop = t + 10 + "px"
+                    break;
+            }
+
+            // console.log(boxLeft, boxTop)
+        }
+
+    </script>
+</body>
+
+</html>

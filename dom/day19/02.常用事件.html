@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <input type="text">
+
+    <button>按钮</button>
+    <br>
+    <textarea></textarea>
+
+
+    <script>
+
+        var box = document.querySelector(".box1")
+
+        var inp = document.querySelector("input")
+
+        var btn = document.querySelector("button")
+
+        var text = document.querySelector("textarea")
+
+        console.log(text)
+
+        // 单击事件
+        // btn.onclick = function(){
+        //     console.log("点击了")
+        // }
+
+        // 鼠标按下就执行
+        // btn.onmousedown = function(){
+        //     console.log("按下了")
+        // }
+
+        // 鼠标抬起就执行
+        // btn.onmouseup = function(){
+        //     console.log("松开了")
+        // }
+
+        // 鼠标双击才会执行
+        // btn.ondblclick = function(){
+        //     console.log("双击666")
+        // }
+
+        // 表单失去焦点才执行
+        // inp.onblur = function(){
+        //     console.log("失去焦点")
+        // }
+
+        // 表单获取焦点才执行
+        // inp.onfocus = function(){
+        //     console.log("获取焦点")
+        // }
+
+        // 表单失去焦点之后表单内容有所变化才会执行
+        // inp.onchange = function(){
+        //     console.log("表单变化了")
+        // }
+
+        // 表单输入就会执行
+        // inp.oninput = function(){
+        //     console.log(this.value)
+        // }
+
+        // 浏览器窗口变化就会执行
+        // window.onresize = function(){
+        //     console.log("变化了")
+        // }
+
+        // 键盘按下就会执行
+        // inp.onkeydown = function(event){
+        //     console.log(event)
+        // }
+
+        // inp.onkeyup = function () {
+        //     console.log("键盘抬起了")
+        // }
+
+
+        // 鼠标移入事件     经过子元素会触发
+        // box.onmouseover = function(){
+        //     console.log("移入了")
+        // }
+
+        // 鼠标移出事件     经过子元素会触发
+        // box.onmouseout = function(){
+        //     console.log("移出了")
+        // }
+
+
+        // 鼠标移入事件     经过子元素不会触发
+        // box.onmouseenter = function(){
+        //     console.log("移入了")
+        // }
+
+        // 鼠标移出事件     经过子元素不会触发
+        // box.onmouseleave = function(){
+        //     console.log("移出了")
+        // }
+
+        // 只要鼠标移动就会触发
+        // box.onmousemove = function () {
+        //     console.log("移动了")
+        // }
+
+        // 页面滚动就会触发
+        // box.onscroll = function(){
+        //     console.log("滚动了")
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

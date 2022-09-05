@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 0;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button>
+    <button id="btn4">test</button>
+    <br><br>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div style="width: 1px;height: 1000px;background-color: #000;position: absolute;left: 800px;top: 0;"></div>
+
+    <script src="./tools.js"></script>
+
+    <script>
+
+        var btn1 = document.querySelector("#btn1")
+        var btn2 = document.querySelector("#btn2")
+
+        var box1 = document.querySelector(".box1")
+
+
+
+        function animtion(el, attr, target, speed) {
+            clearInterval(el.interId)
+            var current = parseInt(getStyle(el, attr))
+            var speed = speed
+
+            if (current >= target) {
+                speed = -speed
+            }
+
+            el.interId = setInterval(function () {
+
+                var current = parseInt(getStyle(el, attr))
+
+                var newValue = speed + current
+
+                if (newValue >= target && speed > 0 || newValue <= target && speed < 0) {
+                    newValue = target
+                }
+
+                el.style[attr] = newValue + "px"
+
+                if (newValue == target) {
+                    clearInterval(el.interId)
+                }
+
+            }, 100)
+
+        }
+        // animtion(box1, "left", 800, 10)
+
+        var btn3 = document.querySelector("#btn3")
+
+        btn3.onclick = function () {
+            animtion(box1, "left", 800, 10)
+        }
+
+
+
+
+        btn1.onclick = function () {
+
+            var speed = 10
+
+            var interId = setInterval(function () {
+
+                var a = parseInt(getStyle(box1, "left"))
+
+                var left = a + speed
+
+                if (left >= 800) {
+                    left = 800
+                }
+
+                box1.style.left = left + "px"
+
+                if (left == 800) {
+                    clearInterval(interId)
+                }
+
+            }, 100)
+
+        }
+
+
+
+
+        // btn2.onclick = function () {
+
+        //     var speed = 10
+
+        //     var interId = setInterval(function () {
+
+        //         var a = parseInt(getStyle(box1, "left"))
+
+        //         var left = a - speed
+
+        //         if (left <= 0) {
+        //             left = 0
+        //         }
+
+        //         box1.style.left = left + "px"
+
+        //         if (left == 0) {
+        //             clearInterval(interId)
+        //         }
+
+        //     }, 100)
+
+        // }
+
+    </script>
+
+</body>
+
+</html>

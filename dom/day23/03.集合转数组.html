@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button data-id="1001">按钮1</button>
+    <button data-id="1002">按钮2</button>
+    <button data-id="1003">按钮3</button>
+
+    <ul>
+        <li>第一个</li>
+        <li>宝马</li>
+        <li>宝马</li>
+        <li>最后一个</li>
+    </ul>
+
+    <script>
+
+        var btns = document.querySelectorAll("button")
+
+
+        // Array.from   将集合转成数组
+        // console.log(Array.from(btns))
+
+
+        // var arr = Array.from(btns)
+        // var a = arr.filter(function(item){
+        //     return item.innerHTML == "按钮1"
+        // })
+
+        // console.log(arr)
+
+        // var btn = Array.from(btns).filter(function (item) {
+        //     return item.dataset.id == "1002"
+        // })
+        // console.log(btn)
+
+        // function fun() {
+        //     // console.log(arguments)
+        //     var arr = Array.from(arguments).sort(function (n1, n2) {
+        //         return n2 - n1
+        //     })
+        //     var newArr = []
+        //     arr.forEach(function (item) {
+        //         newArr.indexOf(item) == -1 ? newArr.push(item) : ""
+        //     })
+
+        //     return newArr
+        // }
+        // var arr = fun(1, 2, 2, 3, 6, 3, 4, 5)
+        // console.log(arr)
+
+
+
+        var ul = document.querySelector("ul")
+
+
+
+        /* 
+            insertAdjacentHTML:
+                在某个元素的某个位置添加内容  第一个参数插入位置  第二个参数插入的内容
+                    beforebegin：元素自身的前面。
+                    afterend：元素自身的后面。
+                    afterbegin：插入元素内部的第一个子节点之前。
+                    beforeend：插入元素内部的最后一个子节点之后。
+
+            insertAdjacentHTML和innerHTML的区别：
+                insertAdjacentHTML：是在某个元素的某个位置插入元素
+                innerHTML：将某个元素内的所有内容替换
+        */
+
+        // ul的前面添加一个div
+        // ul.insertAdjacentHTML("beforebegin", "<div>我是一个div</div>")
+        // ul的前面添加一个div
+        // ul.insertAdjacentHTML("afterend", "<div>我是一个div</div>")
+
+        // ul内部的最前面添加一个li
+        // ul.insertAdjacentHTML("afterbegin", "<li>第一个的前面</li>")
+        // ul内部的最后面添加一个li
+        // ul.insertAdjacentHTML("beforeend", "<li>最后一个的后面</li>")
+
+
+        // var btn = document.querySelector("button")
+
+        // var inp = document.querySelector("input")
+
+        // btn.onclick = function () {
+        //     ul.insertAdjacentHTML("afterbegin", '<li>' + inp.value + '<a href="javascript:;">删除</a></li>')
+        // }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

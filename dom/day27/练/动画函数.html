@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../tools.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+
+        }
+
+        #box2 {
+            width: 150px;
+            height: 150px;
+            background-color: yellowgreen;
+            position: absolute;
+            left: 0;
+            top: 250px;
+        }
+
+        .line {
+            width: 1px;
+            position: absolute;
+            left: 800px;
+            height: 500px;
+            background-color: #000;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn1">黄盒子过去</button>
+    <button id="btn2">黄盒子回来</button>
+    <button id="btn3">绿盒子过去</button>
+    <button id="btn4">绿盒子回来</button>
+
+    <br>
+    <br>
+
+    <div id="box1"></div>
+    <br>
+    <br>
+    <div id="box2"></div>
+
+    <div class="line"></div>
+
+    <script>
+        var btn1 = document.querySelector("#btn1");
+        var btn2 = document.querySelector("#btn2");
+        var btn3 = document.querySelector("#btn3");
+        var btn4 = document.querySelector("#btn4");
+        var box1 = document.querySelector("#box1");
+        var box2 = document.querySelector("#box2");
+
+        //动画函数
+        /*
+            参数一：需要获取的dom元素
+            参数二：string  需要移动的方向
+            参数三：移动的速度
+            参数四：需要到达的位置(像素值，不需要 'px')
+        */
+        function animation(el, addr, speed, target) {
+            clearInterval(el.interId);
+            var current = parseInt(getStyle(el, addr));
+            var speed = speed;
+            if (current >= target) {
+                speed = -speed;
+            }
+            el.interId = setInterval(function () {
+                current = parseInt(getStyle(el, addr));
+                var newValue = current + speed;
+                el.style[addr] = newValue + 'px';
+                if (newValue >= target && speed > 0 || newValue <= target && speed < 0) {
+                    newValue = target;
+                    el.style[addr] = newValue + 'px'
+                    clearInterval(interId);
+                }
+            }, 100)
+        }
+
+        btn1.onclick = function () {
+            animation(box1, "left", 10, 800);
+        }
+
+        btn2.onclick = function () {
+            animation(box1, 'left', 10, 0)
+        }
+
+        btn3.onclick = function () {
+            animation(box2, "left", 10, 800);
+        }
+
+        btn4.onclick = function () {
+            animation(box2, 'left', 10, 0)
+        }
+
+        //分开写法
+        // var interId
+        // btn1.onclick = function () {
+        //     clearInterval(interId);
+        //     interId = setInterval(function () {
+        //         var speed = 10;
+        //         var a = parseInt(getStyle(box1, "left"));
+        //         var left = a + speed;
+        //         box1.style.left = left + 'px';
+
+        //         if(left >= 800) {
+        //             left = 800
+        //             box1.style.left = left + 'px';
+        //             clearInterval(interId)
+        //         }
+        //     }, 100)
+        // }
+
+        // btn2.onclick = function () {
+        //     clearInterval(interId);
+        //     interId = setInterval(function () {
+        //         var speed = 10;
+        //         var a = parseInt(getStyle(box1, "left"));
+        //         var left = a - speed;
+        //         box1.style.left = left + 'px';
+
+        //         if(left <= 0) {
+        //             left = 0
+        //             box1.style.left = left + 'px';
+        //             clearInterval(interId)
+        //         }
+        //     }, 100)
+        // }
+    </script>
+
+</body>
+
+</html>

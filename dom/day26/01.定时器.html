@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>5</h1>
+    <script>
+
+        /*
+            定时器
+                setInterval(callback,time（毫秒）)
+                会在指定时间能不断的执行
+            清除定时器：
+                在设置定时器的时候每个定时器都会返回一个id
+                我们要用这个id才能将定时器清除
+        */
+
+        // setInterval(function () {
+        //     console.log(111)
+        // }, 1000)
+
+
+        var h1 = document.querySelector("h1")
+
+        var num = +h1.innerHTML
+
+
+        // console.log(num)
+        // 设置一个定时器
+        // var interId = setInterval(function () {
+        //     num--
+        //     h1.innerHTML = num
+        //     if (num <= 0) {
+        //         // 清除定时器
+        //         /* 
+        //             清除定时器的时候会将本次代码执行完
+        //         */
+        //         clearInterval(interId)
+        //     }
+        // }, 1000)
+
+
+        // 定时器会在第一次时间到达才会执行
+        // var a = setInterval(function () {
+        //     console.log(111)
+        //     if(true){
+        //         clearInterval(a)
+        //     }
+        //     console.log(111)
+        // },2000)
+
+
+
+        // 延迟执行
+        // var a = setTimeout(function () {
+        //     // 清除延迟执行
+        //     clearTimeout(a)
+        //     var b = setInterval(function () {
+        //         num--
+        //         h1.innerHTML = num
+        //         if (num <= 0) {
+        //             // 清除定时器
+        //             /* 
+        //                 清除定时器的时候会将本次代码执行完
+        //             */
+        //             clearInterval(b)
+        //         }
+        //     }, 1000)
+        // }, 2000)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

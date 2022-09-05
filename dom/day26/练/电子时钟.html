@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 200px;
+            background-color: #000;
+            margin: 100px auto;
+            padding: 30px 50px;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+        li{
+            
+            color: #fff;
+            font-size: 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>:</li>
+            <li>1</li>
+            <li>1</li>
+            <li>:</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+
+    <script>
+        time()
+        function time() {
+            var list = document.querySelectorAll("li");
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s= date.getSeconds();
+
+            list[0].innerHTML = parseInt(h/10);
+            list[1].innerHTML = parseInt(h%10);
+            list[3].innerHTML = parseInt(m/10);
+            list[4].innerHTML = parseInt(m%10);
+            list[6].innerHTML = parseInt(s/10);
+            list[7].innerHTML = parseInt(s%10);
+
+            if(s%2==0) {
+                list[2].style.color = "red"
+                list[5].style.color = "red"
+            }else {
+                list[2].style.color = "white"
+                list[5].style.color = "white"
+            }
+        }
+        interId = setInterval(time,1000)
+    </script>
+    
+</body>
+</html>

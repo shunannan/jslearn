@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 3px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <button>按钮</button> -->
+
+    <input type="text">
+
+    <div></div>
+
+    <script>
+        var btn = document.querySelector("button")
+
+        var inp = document.querySelector("input")
+
+        var box = document.querySelector("div")
+
+        /* 
+            event:事件对象  事件绑定默认就有的 不支持ie8
+            包含了 敲击了哪个键盘  鼠标当前的坐标....
+            ie8底下要使用window.event  不支持火狐低版本
+            火狐得用event
+        */
+
+        // 按下回车创建一个dom元素
+        inp.onkeydown = function (event) {
+            // event.keyCode    获取到按下的键
+            if (event.keyCode == 13) {
+
+                var p = document.createElement("p")
+
+                var text = document.createTextNode(inp.value)
+
+                p.appendChild(text)
+
+                box.appendChild(p)
+
+                inp.value = ""
+            }
+
+        }
+
+        // box.onmousemove = function (event) {
+        //     获取到整个窗口的x轴坐标
+        //     console.log(event.clientX)
+        //     获取到整个窗口的x轴坐标
+        //     console.log(event.clientY)
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

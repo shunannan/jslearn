@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        var box = document.querySelector("div")
+
+        // box添加鼠标按下事件
+        box.onmousedown = function (event) {
+            
+            // 计算box距离左边的位置 减去 鼠标坐标位置  水平方向
+            var l = box.offsetLeft - event.clientX
+            // 计算box距离左边的位置 减去 鼠标坐标位置  垂直方向
+            var t = box.offsetTop - event.clientY
+            // 给document添加鼠标移动事件
+            document.onmousemove = function (event) {
+                // 保存鼠标坐标 X轴
+                var X = event.clientX
+                // 保存鼠标坐标 Y轴
+                var Y = event.clientY
+                // 给box做样式      鼠标坐标减去l
+                box.style.marginLeft = X + l + "px"
+                // 给box做样式      鼠标坐标减去t
+                box.style.marginTop = Y + t + "px"
+            }
+            // box添加鼠标抬起事件
+            box.onmouseup = function () {
+                // 清除document的鼠标移动事件
+                document.onmousemove = null
+                // 鼠标抬起回到左上角
+                box.style.marginLeft = "0px"
+                box.style.marginTop = "0px"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

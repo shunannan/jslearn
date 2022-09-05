@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            /* padding: 10px;
+            border: 10px solid; */
+            background-color: red;
+            margin: 100px;
+            overflow: auto;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 600px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">你好</div>
+    </div>
+    <script>
+
+        var box1 = document.querySelector(".box")
+        var box2 = document.querySelector(".box1")
+
+        // 只读的属性   字符串类型  带px
+        // 得到的只是宽度   不加边框和内边距
+        // console.log(getComputedStyle(box).width)
+        // 得到的只是高度   不加边框和内边距
+        // console.log(getComputedStyle(box).htight)
+
+
+        // number类型   不带px
+        // 得到的是宽度加内边距的值 不加边框
+        // console.log(box.clientWidth)
+        // 得到的是高度度加内边距的值 不加边框
+        // console.log(box.clientHeight)
+
+
+        // number类型   不带px
+        // 得到的是可视范围内的宽度
+        // console.log(box.offsetWidth)
+        // 得到的是可视范围内的宽度
+        // console.log(box.offsetHeight)
+
+
+        // 距离最近开启定位父元素的左偏移量：
+        // 如果说父元素没有一个开启定位那就表示离浏览器的距离
+
+        // 元素的左偏移量
+        // console.log(box1.offsetLeft)
+
+        // 元素的上偏移量
+        // console.log(box1.offsetTop)
+
+
+        // 垂直方向的可滚动区域
+        // console.log(box2.scrollHeight)
+
+        // 水平方向的可滚动区域
+        // console.log(box2.scrollWidth)
+
+        box1.onscroll = function () {
+
+            // 垂直方向滚动了多少距离
+            // console.log(this.scrollTop)
+            // 垂水平方向滚动了多少距离
+            // console.log(this.scrollLeft)
+
+            // if(box2.scrollHeight - box1.offsetHeight == Math.ceil(this.scrollTop)){
+            //     console.log("到底了")
+            // }
+        }
+
+
+        /*
+            判断滚动到底部的方法：
+
+            滚动的距离会有一个问题scrollTop的值有可能会出现少了一点点距离的情况
+                第一种：
+                    滚动区域的高度  -  可见宽度  ==  垂直方向滚动的距离
+
+                第一种方法解决滚动高度问题方案：
+                    滚动区域的高度  -  可见宽度  <=  垂直方向滚动的距离 + 1
+
+                第二种：
+                    滚动区域的高度  ==  可见宽度  +  垂直方向滚动的距离
+
+                第二种方法解决滚动高度问题方案：
+                    滚动区域的高度 - 1  <=  可见宽度  +  垂直方向滚动的距离
+        
+        */
+
+
+
+    </script>
+</body>
+
+</html>

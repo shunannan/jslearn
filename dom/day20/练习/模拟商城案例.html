@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="">
+        .wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: none;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 1000;
+            width: 400px;
+            height: 300px;
+            box-shadow: 0px 0px 10px #ccc;
+            padding: 5px;
+            background-color: white;
+        }
+
+        /*遮罩层*/
+
+        .mask {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        td .inp {
+            display: none;
+        }
+
+        td.on .inp {
+            display: block;
+        }
+
+        td.on .text {
+            display: none;
+        }
+
+        table {
+            width: 600px;
+            margin-top: 20px;
+
+        }
+
+        tr {
+            height: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            商品名称：<input type="text" class="pname"><br> 价格：
+            <input type="text" class="pprice"><br> 是否上架：
+            <input type="checkbox" class="pup"><br> 创建时间：
+            <input type="date" class="ptime"><br>
+            <button id="new-prod-btn">确认新增商品</button>
+            <button id="close">取消</button>
+        </div>
+        <div class="mask"></div>
+    </div>
+
+    <button id="open">新增商品</button>
+    <button id="print">打印选中的商品名称</button>
+    <button class="pldel">批量删除</button>
+
+    <table id="table" border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="all"></th>
+                <th>商品名称</th>
+                <th>价格</th>
+                <th>是否上架</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+             <td><input type="checkbox" class="check"></td>
+             <td>苹果手机</td>
+             <td>6000</td>
+             <td>是</td>
+             <td>2017-4-4</td>
+             <td><button>下架</button><button>删除</button></td>
+           </tr>
+           <tr>
+             <td><input type="checkbox" class="check"></td>
+             <td>三星手机</td>
+             <td>3000</td>
+             <td>否</td>
+             <td>2017-2-4</td>
+             <td><button>上架</button><button>删除</button></td>
+           </tr> -->
+
+        </tbody>
+
+        <div class="addGoods">
+
+        </div>
+
+
+    </table>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

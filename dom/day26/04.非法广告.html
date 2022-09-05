@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+
+        var box = document.querySelector("div")
+        // div的宽
+        var bWidth = box.offsetWidth
+        // div的高
+        var bHeight = box.offsetHeight
+        // html的宽度
+        var cWidth = document.documentElement.clientWidth
+        // html的高度
+        var cHeight = document.documentElement.clientHeight
+        // 初始移动速度
+        var speedX = 10
+        var speedY = 10
+        var interId
+
+        function move() {
+            // 开启定时器
+            interId = setInterval(function () {
+                // div距离左边的距离
+                var ol = box.offsetLeft
+                // div距离上面的距离
+                var ot = box.offsetTop
+                // 水平方向移动
+                box.style.left = ol + speedX + "px"
+                // 垂直方向移动
+                box.style.top = ot + speedY + "px"
+                // 水平方向到边
+                if (ol + bWidth > cWidth) {
+                    box.style.left = cWidth - bWidth + "px"
+                }
+                // 垂直方向到边
+                if (ot + bHeight > cHeight) {
+                    box.style.top = cHeight - bHeight + "px"
+                }
+                // 水平方向折返
+                if (cWidth - bWidth == box.offsetLeft || box.offsetLeft < 0) {
+                    speedX = -speedX
+                }
+                // 垂直方向折返
+                if (cHeight - bHeight == box.offsetTop || box.offsetTop < 0) {
+                    speedY = -speedY
+                }
+            }, 100)
+        }
+        move()
+
+        // 鼠标移动到div上面停止
+        box.onmouseenter = function () {
+            clearInterval(interId)
+        }
+        // 鼠标移出div继续执行
+        box.onmouseleave = function () {
+            move()
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

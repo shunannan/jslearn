@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <script>
+
+        var arr = [1, 2, 3, 4, 5]
+
+        var btns = document.querySelectorAll("button")
+
+
+        // for (var key in btns) {
+        //     btns[key].onclick = function(){
+        //         console.log(111)
+        //     }
+        // }
+
+        // for (var item of btns) {
+        //     item.onclick = function(){
+        //         console.log(111)
+        //     }
+        // }
+
+
+        // 遍历数组 可以遍历集合 伪数组 没有返回值
+        // arr.forEach(function (item, index, arr) {
+        //     console.log(item, index, arr)
+        // })
+
+        // var a = btns.forEach(function (item) {
+        //     item.onclick = function () {
+        //            console.log(111)
+        //     }
+        // })
+        // console.log(a)
+
+
+        // 查找满足条件的那一项数据的下标   返回值  下标
+        // var index = arr.findIndex(function (item) {
+        //     return item == 4
+        // })
+
+        // console.log(index)
+
+
+        // 查找满足条件的那一项数据   返回值    那一项数据
+        // var a = arr.find(function (item) {
+        //     return item == 3
+        // })
+
+        // console.log(a)
+
+
+        // 将满足条件的数据返回出来组成一个新的数组     返回值  新数组
+        // var a = arr.filter(function (item) {
+        //     return item > 2
+        // })
+        // console.log(a)
+
+        arr = [
+            { name: "张1", age: 0, price: 100, count: 2 },
+            { name: "张2", age: 0, price: 300, count: 3 },
+            { name: "张3", age: 0, price: 200, count: 1 },
+            { name: "张4", age: 14, price: 400, count: 5 }
+        ]
+
+        // 返回什么就把发挥的东西放到新的数组里    返回值   新数组
+        // var a = arr.map(function (item) {
+        //     return item.age
+        // })
+        // console.log(a)
+
+
+        // 判断数据 只要有一个不为 true 整体就不为true  全为true才会返回true    返回值  布尔
+        // var a = arr.every(function (item) {
+        //     return item.age
+        // })
+        // console.log(a)
+
+        // 判断数据 只要有一个为 true 整体就为true  全为false才会返回false    返回值  布尔
+        // var a = arr.some(function (item) {
+        //     return item.age
+        // })
+        // console.log(a)
+
+
+        // 计算总价     返回值  计算出来的总价
+        // var a = arr.reduce(function (pre, item) {
+        //     return pre + item.price * item.count
+        // }, 0)
+        // console.log(a)
+
+
+
+    </script>
+</body>
+
+</html>

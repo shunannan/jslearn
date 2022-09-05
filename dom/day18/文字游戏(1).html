@@ -86,65 +86,85 @@
     </div>
 </body>
 <script>
-    var colorArr = ["black", "yellow", "red", "green", "blue"];
+    var showWord = document.querySelector("#showWord")
 
-    var liList = document.querySelectorAll("li");
-    var showWord = document.querySelector("#showWord");
-    var time = document.querySelector("#time");
-    var score = document.querySelector("#score");
-    var rdom = Math.floor(Math.random() * 5);
-    showWord.style.color = colorArr[rdom]
+    var list = document.querySelectorAll("li")
 
-    var s = 20;
-    var interval, grade = 0;
+    var color = ["black", "blue", "green", "yellow", "red"]
+
+    var text = ["黑", "蓝", "绿", "黄", "红"]
+
+    var times = 20
+
+    var timer = null
+
+    var time = document.querySelector("#time")
+
+    var sum = 0
+
+    var score = document.querySelector("#score")
 
 
-    for (var i = 0; i < liList.length; i++) {
-        liList[i].setAttribute("data-color", colorArr[i])
+    function setView() {
+        showWord.innerHTML = text[ran()]
 
-        rdom = Math.floor(Math.random() * 5);
-        liList[i].style.color = colorArr[rdom];
+        var index = ran()  
 
-        liList[i].onclick = function () {
+        showWord.style.color = color[index] 
 
-            if (showWord.style.color == this.getAttribute("data-color")) {
-                clearInterval(interval)
-                interval = setInterval(function () {
-                    if (s > 0) {
-                        s--
-                        time.innerHTML = "剩余时间:" + s;
-                    } else {
-                        alert("时间到，游戏结束")
-                        clearInterval(interval)
+        showWord.index = index 
+        setLi()
+    }
+    setView()
+
+    function setLi() {
+        var textIndex = [0, 1, 2, 3, 4].sort(function () { // [2,4,1,0,3]
+            return Math.random() - 0.5
+        })
+
+        var colorIndex = [0, 1, 2, 3, 4].sort(function () {// [3,1,4,0,2]
+            return Math.random() - 0.5
+        })
+
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.color = color[colorIndex[i]] 
+
+            list[i].innerHTML = text[textIndex[i]]   
+
+            list[i].setAttribute("index", textIndex[i]) 
+        }
+    }
+
+    for (var i = 0; i < list.length; i++) {
+        list[i].onclick = function () {
+            if (this.getAttribute("index") == showWord.index) {
+                setView()
+                sum++
+                score.innerHTML = "得分:" + sum
+                timer = setInterval(function () {
+                    times -= 0.05
+                    time.innerHTML = "剩余时间:" + times.toFixed(2)
+
+                    if (times <= 0) {
+                        times = 0
+                        time.innerHTML = "剩余时间:" + times.toFixed(2)
+                        clearInterval(timer)
+                        alert("游戏结束，您的分数是" + sum)
                     }
-
-
-                }, 1000)
-                grade++;
-                score.innerHTML = '得分:'+grade;
-                console.log(grade);
-                rdom = Math.floor(Math.random() * 5);
-                showWord.style.color = colorArr[rdom]
-                for (var j = 0; j < liList.length; j++) {
-                    rdom = Math.floor(Math.random() * 5);
-                    liList[j].style.color = colorArr[rdom];
-                }
-                
-            } else {
-                s = 0;
-                alert("选择错误，游戏结束,\n 您的得分为："+grade)
-                time.innerHTML = "剩余时间:" + s;
-                clearInterval(interval)
+                }, 50)
+                setView()
             }
         }
     }
 
-// function rdom() {
-//     var rdom = Math.floor(Math.random() * 5);
-//     showWord.style.color = colorArr[rdom]
-// }
 
 
+
+
+
+    function ran() {
+        return Math.floor(Math.random() * 5)
+    }
 </script>
 
 </html>

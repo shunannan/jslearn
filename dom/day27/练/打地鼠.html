@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .rel {
+            text-align: center;
+            margin: 20px 0;
+        }
+        input {
+            width: 25px;
+            text-align: center;
+        }
+        label {
+            margin-left: 10px;
+        }
+
+        #box {
+            width: 600px;
+            height: 600px;
+            border: 10px solid yellowgreen;
+            margin: 0 auto;
+        }
+
+        #box div {
+            border: 2px solid white;
+            background-color: rgb(90, 90, 90);
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #start {
+            width: 100px;
+            height: 50px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .over {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .over div {
+            width: 800px;
+            height: 200px;
+            background-color: #fff;
+            opacity: 0.7;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .showImg {
+            background-image: url("ds.jpg");
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="rel">
+        <label>
+            倒计时：<input id="time" type="text" readonly value="20">
+        </label>
+        <label>
+            击中：<input id="count" type="text" readonly value="0">个
+        </label>
+        <label>
+            得分：<input id="score" type="text" readonly value="0">分
+        </label>
+    </div>
+
+    <div id="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <button id="start">开始游戏</button>
+
+    <div class="over">
+        <div>
+            游戏结束了
+            <button id="endBtn">结束游戏</button>
+            <button id="cStart">重新开始</button>
+        </div>
+    </div>
+
+    <script>
+        var start = document.querySelector("#start");
+        var over = document.querySelector(".over");
+        var endBtn = document.querySelector("#endBtn");
+        var cStart = document.querySelector("#cStart");
+        var time = document.querySelector("#time");
+        var count = document.querySelector("#count");
+        var score = document.querySelector("#score");
+        var _divs = document.querySelector("#box div");
+
+        
+
+    </script>
+
+</body>
+</html>

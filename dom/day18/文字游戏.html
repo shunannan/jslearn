@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .container {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 0 3px gray;
+        }
+
+        .top {
+            height: 30px;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        .top #time {
+            float: left;
+            margin-left: 5px;
+        }
+
+        .top #score {
+            float: right;
+            margin-right: 5px;
+        }
+
+        #showWord {
+            text-align: center;
+            line-height: 100px;
+            font-size: 150px;
+            margin-top: 50px;
+            ;
+        }
+
+        .rule {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        ul {
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li {
+            width: 400px;
+            height: 300px;
+            line-height: 250px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="top">
+            <span id="time"> 剩余时间:20 </span>
+            <span id="score"> 得分:0 </span>
+        </p>
+        <p id="showWord">黑</p>
+        <p class="rule">根据上面字的颜色,在下面选择正确的字</p>
+        <ul>
+            <li>黑</li>
+            <li>黄</li>
+            <li>红</li>
+            <li>绿</li>
+            <li>蓝</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var pShowWord = document.getElementById("showWord");
+    var lis = document.getElementsByTagName("li");
+    var spanTime = document.getElementById("time");
+    var spanScore = document.getElementById("score");
+
+    //数据源
+    var colors = ["black", "yellow", "red", "green", "blue"];
+    var words = ["黑", "黄", "红", "绿", "蓝"];
+    //得分0
+    var score = 0;
+    var time = 20;
+    //计时器
+    var timer = null;
+
+    //改变showWord和li
+    function setView() {
+        pShowWord.innerHTML = words[rand(0, 5)];
+        var index = rand(0, 5)
+        pShowWord.style.color = colors[index];
+        // console.log(pShowWord.index)
+        pShowWord.index = index;
+
+        // console.log(pShowWord.index)
+        //设置li
+        setLi();
+    }
+    setView();
+
+    function setLi() {
+        //打乱数组
+        var wordIndex = [0, 1, 2, 3, 4].sort(function () {
+            return Math.random() - 0.5;
+        })
+        var colorIndex = [0, 1, 2, 3, 4].sort(function () {
+            return Math.random() - 0.5;
+        })
+        console.log(Math.random() - 0.5)
+        // console.log(colorIndex)
+        for (var i = 0; i < lis.length; i++) {
+            //文字的下标
+            var wi = wordIndex[i];
+            lis[i].innerHTML = words[wi];
+            lis[i].index = wi;
+            //颜色的下标
+            var ci = colorIndex[i];
+            lis[i].style.color = colors[ci];
+        }
+    }
+
+    //为li添加点击事件
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+            if (this.index === pShowWord.index) {
+                //点对了，增加得分
+                score++;
+                spanScore.innerHTML = "得分" + score;
+                if (score === 1) {
+                    timer = setInterval(function () {
+                        time -= 0.05;
+                        spanTime.innerHTML = "剩余时间" + time.toFixed(2);
+                        if (time <= 0) {
+                            time = 0;
+                            spanTime.innerHTML = "剩余时间" + time;
+                            //停止结束，结束游戏
+                            clearInterval(timer);
+                            alert("恭喜您的得分是" + score);
+                        }
+                    }, 50)
+                }
+                // 继续游戏
+                setView();
+            }
+        }
+    }
+    //随机数
+    function rand(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+</script>
+
+</html>
